@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>0528복습.html</title>
+		<script type="text/javascript">	
+		//형변환 - 자바스크립트 기능에 의해 전달 되는 데이터 문자열
+		//수치연산 : 문자형 -> 숫자형 으로 변환
+		//parseInt(), parseFloat(), Number() : 자바스크립트 내장 함수(기능)
+		//사용자에게 숫자를 입력받아 짝/홀수를 구분하는 스크립트 
+		//짝/홀수 구분 1 : 2로 나눈 나머지(나머지 연산자 사용-수치 연산)가 0이면 짝수 아니면 홀수
+		
+		//prompt() 함수로 입력된 data는 문자열 => 숫자형변환
+		num1 = prompt("정수를 입력하세요.");
+		num1 = parseInt(num1); //정수형변환
+		num1 = Number(num1); //숫자형으로 변환, 정수모양->정수형, 실수모양->실수형
+		
+		//제어문 : 프로그램의 흐름을 변경하는 기능
+		// if 문 : 조건식이 참인경우만 실행
+		// 입력받은 정수가 짝수인지 확인
+		// 나머지 연산자 : 10%2 => 10을 2로 나눈 후 나머지 값을 반환
+		if(num1 % 2 ==  0 ) alert("짝수 입니다"); //if문 종료
+		document.write("홀수인 경우는 팝업 메시지가 출력되지 않았습니다");//num1이 짝수인지 홀수인지 상관없이 무조건 실행되는 모드
+		
+		//-----------------------------------------
+		num1 = prompt("정수를 입력하세요.");
+		num1 = parseInt(num1); //정수형변환
+		num1 = Number(num1); //숫자형으로 변환, 정수모양->정수형, 실수모양->실수형	
+		
+		// if~else 문 : 조건식이 참인경우 실행하는 문장1 또는 거짓인경우 실행하는 문장2 중 택 일
+		// 입력받은 정수가 짝수인지 홀수인지 확인하는 스크립트
+		if(num1 % 2 ==  0 ) alert("짝수 입니다"); 
+		else document.write("홀수인 경우는 팝업 메시지가 출력되지 않았습니다<br>"); //if~else문 종료
+		
+		//짝/홀수에 대한 구분2 : 2로 나눈 나머지가 1인경우 홀수 아니면 짝수
+		if(num1 % 2 == 1) alert("홀수입니다");
+		else document.write("짝수인 경우는 팝업 메시지가 출력되지 않았습니다<br>")
+		document.write("판단을 종료합니다"); //왼쪽 코드에 대해서 num1이 짝수일때 실행되는 코드인지 o/x로 표시하시오(o)
+		
+		//---------------------------------------------
+		// 다중 if / 중첩 if
+		// 주문 금액에 따른 배달비 산정
+		// 주문 금액이 18000원 이상이면 배달비 1000원 (주문 금액 조건 1)
+		// 주문 금액이 12000원 이상이고 18000원 미만이면 배달 비 2000원(주문 금액 조건 2)
+		// 주문 금액이 그 외인(주문금액 12000미만) 경우 거리가 200m 이내(주문 거리 조건1)이면 경우 배달비 3000원이고 200m 이상이라면 배달 불가
+		jumun_price=Number(prompt("주문 금액을 입력하세요."))
+		
+		if(jumun_price >= 18000){
+			alert("배달비는 1000원 입니다.");
+			document.write("배달가능 <br>");
+		}else if(jumun_price>=12000){
+			alert("배달비는 2000원 입니다.");
+			document.write("배달가능 <br>");			
+		}else { // 중첩if문은 else문에서도 구성 가능
+			isDist=confirm("배달 거리가 200m 이하입니까? Yes는 확인버튼");
+			if (isDist==true){
+				alert("배달비는 3000원 입니다.");
+				document.write("배달가능 <br>");
+			}else {
+				alert("배달이 불가합니다.");
+				document.write("배달 불가능 <br>");
+			}
+			
+		}
+		
+		//---------------------------------------------------------
+		//switch case문에서 break문이 case문 다음에 표현되지 않으면 case는 계속 진행된다
+		//사용자로부터 오늘이 몇월인지 묻고 계절을 출력해주는 스크립트
+		month = prompt("오늘은 몇 월 입니까?","숫자만 입력하세요. ex)1월 -> 1");
+		
+		switch(month){
+		case "12":document.write("12월 겨울입니다");
+		case "1": document.write("1월 겨울입니다");
+		case "2": document.write("2월 겨울입니다");	break;
+		case "3":
+		case "4":
+		case "5": document.write("봄입니다");break;	
+		case "6":
+		case "7":
+		case "8": document.write("여름입니다");break;	
+		case "9":
+		case "10":
+		case "11": document.write("가을입니다");break;	
+		default : document.write("잘못 입력 했습니다")
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

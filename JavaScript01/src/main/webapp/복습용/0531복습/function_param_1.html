@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			//사용자로부터 예금액과 이자율을 입력받아 함수1=>input으로 생성
+			//이자를 계산해서 출력해주는 함수2=> calInterest(deposit, rate)생성
+			
+			
+			
+			//함수1사용자로부터 예금액과 이자율을 입력받아 함수
+			function input(){
+				var deposit = parseInt(prompt("예금액 입력"));					
+				var rate = Number(prompt("이자율 입력"));   						//이자율은 소숫점 단위로도 나올 수 있기에, 실수형 태그 Number를 사용한다.
+				calInterest(deposit, rate);												//이자를 계산하기 위한 함수를 생성, (calInterest(deposit, rate);)를 통한 매개변수 함수를 넣어줌으로서, 실제값이 전달된다. 
+			}
+			
+			
+			
+			
+			
+			//함수2.예금액과 이자율을 전달받아서 이자만 계산 후 출력하는 함수(return은 없다)
+			function calInterest(deposit, rate){
+				var interest = (deposit * rate)/100; //이자율은 백분율로 표현하는 연산진행.
+				document.write(`예금이자:${interest}원`);
+			}
+						//인수가 있는 호출 - 인수가 2개필요하니, 매개변수는 2개가 필요하다.
+			
+			
+			
+		
+		</script>
+	</head>
+	<body onLoad = "input()">
+	<!-- body태그가 해석이 되면, input함수가 호출되는 구조로 생성=> body태그 이벤트 속성의 값으로 함수 호출 -->    			<!-- button은 body태그 내에 작성, onLoad는 body에 작성. -->
+	<!-- body태그의 해석은 태그가 준비되면, 즉 브라우저에 body태그가 load되면, => onLoad이벤트 속성을 이용한다.  -->       
+	</body>
+</html>

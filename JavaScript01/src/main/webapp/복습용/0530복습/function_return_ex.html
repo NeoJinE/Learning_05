@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		
+		
+		function start(){					//반환받는 함수.
+			var answer = confirm("성적을 입력하시겠습니까?");
+				if(answer == true){
+					alert("평균: "+  input());  //= (`평균: ${input()}`)
+				}else{
+					alert("종료합니다.");
+				}	
+		}
+		
+		function input(){					//국어, 영어, 수학 점수 입력받고, 평균을 구해서, 반환을 진행.
+			var kor = Number(prompt("국어점수를 입력하시오.:  "));
+			var eng = Number(prompt("영어점수를 입력하시오."));
+			var math = Number(prompt("수학점수를 입력하시오."));
+			
+			avg = (kor + eng + math)/3;
+			return avg ;												//반환값이 존재하는 함수.
+				
+			
+		}
+		
+		
+		</script>
+	</head>
+	<body>
+	<button onClick = "start()">성적입력</button>
+	</body>
+</html>

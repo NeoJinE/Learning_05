@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//반환값이 있는 함수input()을 선언.
+		//사용자로부터 두 값을 입력받고, 두 값을 더한 결과값을 반환.
+		function input(){
+			var num1 = Number(prompt("숫자1 입력"));				//Number: 숫자 입력 받아서 정수로 변환.
+			var num2 = Number(prompt("숫자2 입력"));
+			return num1 + num2; 		//두 수를 더해서 반환.
+			
+		}
+		document.write(`"합계: "${input()}`); //=(`합계:  30)이 호출.									//document.write 하기전에 input() 먼저 호출 값을 반환.
+																														//만약 num1에는 10, num2에 20이 있다면, input함수위치에 30값이 나온다. 
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

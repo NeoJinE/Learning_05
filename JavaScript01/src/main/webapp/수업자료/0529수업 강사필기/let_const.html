@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			//let vs const의 차이
+			//let : 동일 변수명 선언 불가능, 값의 재할당 가능(변경 가능)
+			let name="홍길동";
+			//let name="김철수";//동일 변수명 선언 불가능
+			console.log(name);
+			name="강길동";//값의 재할당 가능(변경 가능)
+			console.log(name);
+//------------------------------------------
+			//const : 동일 변수명 선언 불가능, 값의 재할당 불가능(변경 불가)
+			const address = "서울";
+			//const address = "경기";//동일 변수명 선언 불가능 오류
+			console.log(address);
+			
+			address="제주";//상수에 값을 재할당해서 오류 발생
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

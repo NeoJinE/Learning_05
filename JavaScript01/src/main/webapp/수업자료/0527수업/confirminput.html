@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">																		//해당 script함수는 1).사용자에게 학생인지 확인해서 학생이면 50%할인 문구 출력하고 아니면 할인없음을 출력하는 프로그램.
+		var isStudent = confirm("당신은 학생입니까?") 											//자바스크립트 내장함수, 자바스크립트 라이브러리에 작성해서 저장되어 있는 함수
+																												//내장함수 사용은 어떤 의미의 함수인지, 사용법은 어떻게 되는지 알아서 사용법에 맞춰서 함수를 호출하면, 함수의 기능이 실행됨.
+																												//confirm 함수는 사용자에게 의견을 묻고 T/F의 값 중 하나를 전달받아주는 역할을 한다.
+		
+		if (isStudent==true){
+			result = "학생입니다";
+			discount = "50%";
+	}	else{
+			result = "학생이 아닙니다.";
+			discount = "없음";
+	}
+		
+	document.write("결과: "+result + "<br>");
+	document.write("할인율: " + discount);
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

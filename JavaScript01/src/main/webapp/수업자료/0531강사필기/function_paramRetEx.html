@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_paramRetEx.html</title>
+		<script type="text/javascript">	
+			//함수 1. input() - 숫자 5개를 입력받아서 배열에 저장한 후, max()함수에게 배열 전달하고 , 반환받은 값을 출력
+			//매개변수없고 반환할 값도 없는 함수
+			function input(){ //매개변수 없음
+				var nums = new Array(5); //크기가 5인 배열 객체변수 nums 선언 및 생성
+				
+				//5개 숫자 입력 후 배열 저장
+				for(var i=0; i<nums.length; i++){
+					nums[i] = parseInt(prompt("숫자"+(i+1)+" 입력"));
+				}
+				document.write("최대값 : " + max(nums));//max 함수 먼저 호출 반환된 값을 출력 후
+			}//종료 : 반환값 없음
+			
+			
+			//함수 2. max() - 배열 전달받아서(매개변수 필요), 최대값을 구해서, 구한 최대값을 호출한곳에 반환
+			//매개변수있고 반환값이 있는 함수
+			function max(nums){//매개변수
+				var maxNum=0;//제일 큰값을 저장할 변수, 임의값 0으로 초기화
+				//배열이 전달되었으므로 반복문 이용해서 순회하면서 maxNum에 현재 저장값 보다 큰값을 만나면 maxNum의 값을 변경
+				for(var i=0; i < nums.length; i++){ //nums에 값이 5,8,7,3,9 이라고 가정하면
+					if(nums[i] > maxNum)			//0과 5를 비교 -> maxNum = 5					
+						maxNum = nums[i];			//5와 8을 비교 -> maxNum = 8
+				}									//8과 7을 비교, 8과 3을 비교, 8과 9를 비교 -> maxNum = 9  
+				return maxNum; //반환값 			
+			}
+		</script>
+	</head>
+	<!-- body 태그 load 될 때 input 함수 호출 -->
+	<body onLoad = "input()">
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+

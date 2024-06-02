@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_callback_sync.html</title>
+		<script type="text/javascript">	
+		// 동기적 콜백함수 사용
+		//익명함수 - 익명함수변수명 callback
+		var callback = function(){
+			console.log("콜백함수 호출됨");
+		};
+		
+		//일반함수 - 매개변수 cb에는 함수 코드가 전달되어야 함
+		function show(cb){
+			cb(); //전달된 함수코드 호출
+		}
+		//여기까지는 함수 정의 부분--------------------------------
+		
+		//작업(실행코드) 나열------------------------------------
+		//작업은 원칙적으로 위에서 아래로 실행
+		//아래 1,2,3번의 작업은 모두 함수 호출 - 동기적 호출(1번 작업 종료 후 2번 작업 호출 2번 작업 종료 후 3번 작업 호출)
+		//1번 작업
+		console.log("콜백함수 호출전") ;//console.log()자바스크립트 내장함수 - 함수 호출
+		//2번 작업
+		show(callback); //callback 익명함수의 코드가 전달 - callback 익명함수는 콜백함수가 됨
+		//3번 작업
+		console.log("콜백함수 호출 후");//console.log()자바스크립트 내장함수 - 함수 호출
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//콜백함수 호출시, 지역변수를 호출 인자로 사용할 수 있는가의 여부,(사용가능하다.)
+		//일반함수 호출시, 지역변수를 호출 인자로 사용할 수 있는가의 여부,(사용가능하다.)
+		//1.전역변수생성.
+		let globalVar = 100;
+		
+		//2. 일반함수생성
+		function show(localVar){
+			console.log(`전역변수: ${globalVar} / 지역변수: ${localVar}`);										//console.log안의 localVar은 함수 show의 매개변수 localVar이다. 
+		}
+		
+		//3.매개변수가 존재하는 일반함수2생성 => callback매개변수는 함수코드가 전달되게 한다. 
+		function call (callback){
+			let localVar = 1;																							//call함수의 지역변수. call함수에서만 사용가능한 변수.
+			callback(localVar);																						//callback함수에는 지역변수를 함수의 인자로 사용한것. (callback안의 localVar은 call함수의 지역변수 localVar이다.) 
+		}
+		
+		//call 함수를 호출 => 함수코드가 전달되어야 함. (show함수의 코드가 전달.)
+		call(show);
+		
+		//위 함수에서 show함수는 callback함수로 사용되었다.(call함수의 인자는 show함수.= show함수는 callback함수.) =>함수이름을 호출할 때 show함수는 인자로 전달됨.
+		//실행시키면, 전역변수:100. 지역변수:1의 값이 출력된다 => 19라인에서 전달된 localVar 값 1이 12라인 show함수의 매개변수 localVar로 저장되어 => 13라인에서 출력. 
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

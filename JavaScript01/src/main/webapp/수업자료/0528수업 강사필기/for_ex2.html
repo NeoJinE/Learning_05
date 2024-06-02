@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			th{background-color:#FF0;}
+			td{
+				width:100px;
+				text-align:center;
+				}
+		</style>
+		<!--자바스크립트로 동적 생성된 태그도 css의 영향을 받음 -->
+		<script type="text/javascript">	
+			var sum=0 ; // 누적합을 위한 누적 변수 초기화
+			
+			document.write("<table border=\"1\">") ;
+			document.write("<tr><th>i</th><th>sum</th></tr>");
+			for(i=1;i<=10;i++){
+				sum += i;
+				document.write("<tr><td>"+i+"</td><td>"+sum+"</td></tr>");
+			}
+			document.write("</table>");
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

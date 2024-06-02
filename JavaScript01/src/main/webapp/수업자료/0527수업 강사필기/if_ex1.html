@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if_ex1.html</title>
+		<script type="text/javascript">	
+			//사용자로부터 서로 다른 세 수를 입력받아 제일 큰 수 출력하는 프로그램
+			alert("서로 다른 세 숫자(정수)를 입력하세요")
+			var num1 = parseInt(prompt("숫자 1 입력","수치형을 입력하지 않으면 에러 발생"));
+			var num2 = parseInt(prompt("숫자 2 입력","수치형을 입력하지 않으면 에러 발생"));
+			var num3 = parseInt(prompt("숫자 3 입력","수치형을 입력하지 않으면 에러 발생"));
+			
+			// num1 이 제일 큰수가 되려면, num1이 num2보다 커야하고(and) num1이 num3보다 커야함
+			if(num1>num2 && num1>num3){ //num1이 가장 큰 수
+				max = num1 ;
+			} else if (num2 > num3){ // num1은 가장 큰수가 아님, num2가 가장 큰수
+				max = num2 ;
+			} else { // num3이 가장 큰수
+				max = num3;
+			}
+			document.write("가장 큰 수는 : " + max + "입니다.") ;
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

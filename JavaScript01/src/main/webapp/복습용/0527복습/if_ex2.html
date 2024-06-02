@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		
+			
+			
+			//2.강사풀이																												//if문 안에서 변수선언을 하지 않아도 큰 상관은 없다.
+			var prdNum = prompt("상품번호 1 or 2입력.");
+			if (prdNum ==1 || prdNum==2){
+																																			//1. prdNum이 1 or 2일 경우 코드작성
+				if(prdNum==1){																										//2.노트북인 경우 가격과 제품명 설정
+						prdName = "노트북";
+						prdPrice = 1200000;
+					}else{																													//3.노트북이 아니면 운동화에 해당 가격과 제품명 설정
+						prdName = "운동화";
+						prdPrice = "100000";
+					}
+																																			//4.구매할 제품 수량 입력 받기
+				var prdQty = parseInt(prompt("주문수량 입력"));
+				var amount = prdPrice * prdQty;																//5.주문액 구하기
+				
+																																			// var discount; 같은 경우는 명시적 선언하고 if문에서 사용해도 된다.
+																																			//6.할인액 구하기
+				if(amount>=1000000)
+					discount = amount * 0.1;
+				else if (amount>=500000)
+					discount = amount *0.05;
+				else discount = 0;
+																																			//7.실제 지불액 구하기 : 주문금액 - 할인액
+				var total = amount - discount;
+				
+				document.write("상품명 : " + prdName + "<br>");															//8.결과 출력;
+				document.write("가  격 : " + prdPrice + "<br>");	
+				document.write("주문수량 : " + prdQty + "<br>");	
+				document.write("주문액" + amount + "<br>");	
+				document.write("할인액 : " + discount + "<br>");	
+				document.write("지불액 : " + total + "<br>");	
+				
+																																			//9.금액과 관련된 출력에 대해서 천단위 구분자 설정 변수.toLocaleString()
+				document.write("상품명 : " + prdName + "<br>");															
+				document.write("가  격 : " + prdPrice.toLocaleString() + "<br>");	
+				document.write("주문수량 : " + prdQty.toLocaleString() + "<br>");	
+				document.write("주문액" + amount.toLocaleStrin() + "<br>");	
+				document.write("할인액 : " + discount.toLocaleString() + "<br>");	
+				document.write("지불액 : " + total.toLocaleString() + "<br>");													
+				}else {																														//prdNum이 1 or 2가 아닐경우
+				alert ("잘못입력하였습니다.");
+				document.write("종료합니다.");
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			//*챗집이가 정돈해놓은 코드*
+			
+			var prdNum = prompt("상품번호 1 or 2입력.");
+
+		    if (prdNum == 1 || prdNum == 2) {
+		        var prdName, prdPrice;
+
+		        // 제품명과 가격 설정
+		        if (prdNum == 1) {
+		            prdName = "노트북";
+		            prdPrice = 1200000;
+		        } else {
+		            prdName = "운동화";
+		            prdPrice = 100000;
+		        }
+
+		        // 주문할 제품 수량 입력 받기
+		        var prdQty = parseInt(prompt("주문수량 입력", ""));
+
+		        // 주문액 구하기
+		        var amount = prdPrice * prdQty;
+
+		        // 할인액 구하기
+		        var discount;
+		        if (amount >= 1000000) {
+		            discount = amount * 0.1;
+		        } else if (amount >= 500000) {
+		            discount = amount * 0.05;
+		        } else {
+		            discount = 0;
+		        }
+
+		        // 실제 지불액 구하기: 주문금액 - 할인액
+		        var total = amount - discount;
+
+		        // 결과 출력
+		        document.write("상품명: " + prdName + "<br>");
+		        document.write("가격: " + prdPrice.toLocaleString() + "<br>");
+		        document.write("주문수량: " + prdQty.toLocaleString() + "<br>");
+		        document.write("주문액: " + amount.toLocaleString() + "<br>");
+		        document.write("할인액: " + discount.toLocaleString() + "<br>");
+		        document.write("지불액: " + total.toLocaleString() + "<br>");
+		    } else {
+		        alert("잘못 입력하였습니다.");
+		        document.write("종료합니다.");
+		    }
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		
+		//makeTable함수에 전달해주는 함수.
+		function input(){
+			 var rows = parseInt(prompt("테이블의 행 수 입력"));
+			 var cols = parseInt(prompt("테이블의 열 수 입력"));
+			 makeTable(rows, cols);  						   													//인수가 있는 함수를 호출.
+		//매개변수가 없고, 반환값도 없는 함수 => 행열수 입력받고, makeTable 호출하고 종료.
+		}																												//=>매개변수를 전달하는 함수와 받는 함수는 함수명으로 찾아가기에 매개변수의 이름이 달라도 상관없다. 하지만 가독성을 위해 같게 해준다.
+		
+		
+		//2매개변수를 전달받아 테이블을 만들어주는 함수.
+	 	function makeTable(rows, cols){
+	 		document.write(`<table border = "1">`);
+	 			for (i = 1; i<=rows; i++){																			//행수만큼 반복
+	 				document.write(`<tr>`);
+	 				for(j = 1; j<=cols; j++){																		// 각 행에 대한 열수만큼 반복.
+	 					document.write(`<td>★</td>`);
+					}
+	 				document.write(`</tr>`);																		//tr태그를 열고닫고를 같이 써줌으로서, 입력받은 rows만큼 반복을 해서 행을 생성한다.					 		
+	 		document.write(`</table>`);																												//이미 테이블 형태라 br은 안넣어도 된다. 	 			
+	 		}//매개변수가 있고, 반환값이 없는 함수. => 
+		}
+		  
+		</script>
+	</head>
+	<body>
+	<button onClick = "input()">테이블 입력</button>
+	</body>
+</html>

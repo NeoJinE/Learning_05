@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type= "text/javascript">
+//만들함수- 
+//1.사용자에게 카드로 결제할것인지의 여부를 묻는다.  
+//2.카드번호를 입력받고, 
+//3.true가 반환되면 카드번호를 입력받고 카드번호를 출력
+//4.false가 반환되면, 카드로 결제하지 않습니다를 출력.
+
+	var iscard = confirm("카드로 결제 합니까?");  															//(1.)
+
+	if 	(iscard==true){																				
+		var card = prompt("카드번호를 입력하세요", "xxxx-xxxx-xxxx-xxxx");						//(2)
+		document.write("카드번호 : " + card);																	//(3)		
+} 	else{
+	document.write("카드로 결제하지 않습니다.")															//(4)
+}
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

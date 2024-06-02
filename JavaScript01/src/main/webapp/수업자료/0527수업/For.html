@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>For문.html</title>
+		<script type="text/javascript">
+		var sum1 = 0, sum2 =0;
+		//for문 동작 확인, i값의 변화 확인
+		document.write("반복문으로 진입합니다<br>");
+		for (i = 1; i <= 10; i++) {
+   		 document.write("i=" + i + "<br>");
+   		 sum += i ; //sum1=sum1+i, i값을 누적합으로 sum1에 저장.
+		}//1+2+3+4+...			
+		
+		document.write("반복문 밖입니다<br>");
+		document.write("i=" + i +"<br>");	
+		document.write("누적합 : " + sum1); //1부터 10까지의 합: 55.
+		
+		//for문 동작 확인, i값의 변화 확인
+		document.write("반복문으로 다시 진입합니다. 조건식이 바뀝니다.<br>")
+		for(i =1; i<10; i++){
+			document.write("i=" + i +"<br>");
+			sum2 += i; //sum2=sum1+2, i값을 누적합으로 sum2에 저장.
+		}//1+2+3+4+...
+		
+		document.write("반복문 밖입니다<br>");
+		document.write("i=" + i +"<br>");	
+		document.write("누적합 : " + sum2); //1부터 9까지의 합: 45
+		//위 코드 (17라인)부터 반복문 안에서의 i의 값의 범위를 쓰고, 반복문 밖에서 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

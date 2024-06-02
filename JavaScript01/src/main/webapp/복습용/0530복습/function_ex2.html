@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		
+		
+		
+
+		function input(){
+			var num = parseInt(prompt("출력할 별의 수를 입력하세요.")); //var num으로 인해 블럭 내에서 지역변수가 됨.	
+			show();
+			}
+		function show(){																// input의 num변수의 값을 사용해야 하지만, num은 지역변수이기에, 사용이 불가.
+				for(i=1; i<=num; i++){
+					document.write("★")												//별은 출력되지 않는다.
+				}
+		}
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	<button onClick = "input()">숫자입력</button>  
+	</body>
+</html>

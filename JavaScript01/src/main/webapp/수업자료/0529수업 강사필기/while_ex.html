@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>while_ex.html</title>
+		<script type="text/javascript">	
+		// 사용자가 입력한 수 만큼 이미지 출력
+		var i=1; //초기값
+		
+		var num = parseInt(prompt("숫자 입력"));
+		
+		document.write("<h2>총 " + num + "개의 이미지 출력</h2>" );
+		
+		while(i<=num){//조건식
+			if(i%3 == 1)
+				document.write("<img src=\"image/cherry.png\">");
+			else if (i%3 == 2)
+				document.write("<img src=\"image/bomb.png\">");
+			else
+				document.write("<img src=\"image/apple.png\">");
+			i++; //증가감
+		}
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

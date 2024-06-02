@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			
+			//태그를 document.write()를 이용해서 동적 출력하는 프로그램
+			//목록 태그 생성 <ul><li></li></ul> : li태그를 반복문을 이용해 동적 생성
+			
+			var i = 0;
+			document.write("<li> li태그 동적생성</li>");
+			//ul 태그 내에 li태그가 있어야 한다.
+			//1. ul 태그 생성(여는태그)
+			document.write("<ul type = 'square'>");
+			
+			//2. li태그 반복 요소로 생성
+			for(i = 0; i<11; i++){			//반복문이 참이되는 (문장을 실행하는)경우, i가 0~10일때까지 참, i = 11이 되면서, 반복문을 벗어나게 된다.
+				document.write("<li> i = " + i + "</li>");	
+			}
+			
+			
+			//3. ul태그 생성(닫는태그)
+			document.write("</ul>");
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+		<li>li태그 body에 정적으로 생성</li>
+		
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

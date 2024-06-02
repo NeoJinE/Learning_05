@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if_ex2.html</title>
+		<script type="text/javascript">	
+		
+		/* var colors = new Array(4);
+		for(i = 0; i<4; i++){
+			colors[i] = prompt([i + 1] + "번째 색상입력");
+		}
+		document.write("<ol type = 'A'>");
+		for (i = 0; i<colors.length; i++){
+		document.write("<li>" + colors[i] + "</li>");
+		}
+		
+		document.write("</ol>") */
+		
+		/* var names = new Array(4);
+		for(i = 0; i<4; i++){
+			names[i] = prompt("학생: " + (i+1) + "입력");
+		}
+		document.write("<table border = '1'>");
+		for(i = 0; i<names.length; i++){
+			document.write("<tr><td>" + (i+1)+ "</td> <td>" + names[i] + "</td></tr>")
+		}
+		document.write("</table>") */
+		
+		var answer;
+		var count = 0;
+		do{
+			count++
+			alert("경고실행: " +count+"회 실행");
+			answer = confirm("계속 경고창을 보시겠습니까?"); 					//confirm자체만으로도 t/f값을 출력하는 알고리즘이 내포되어 따로 설정하지 않아도 된다.
+		}while(answer)																			//
+			document.write("경고창을 총 " +count+ "회 실행하셨습니다.");
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

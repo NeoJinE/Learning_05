@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//var 과	let의 차이.
+		//1.중복선언의 여부
+		//1-1var을 이용해서, 동일 변수명으로 변수 선언-----------------------
+		var name = "홍길동";			//1번째 var
+		console.log(name);												
+		var name ="이몽룡";				//2번째 var
+		console.log(name);
+		
+		//let name = "성춘향"; 			    		//1번째 let (var로 선언한 변수 name이 동일해, 오류가 발생하며) 
+		//console.log(name);				    		//let 명령어는 어떤 선언이던, (var로 선언했던 let으로 선언했던) 
+															//변수가 이미 선언되어 있다면, 중복변수 선언으로 보고, 에러를 발생한다. 
+		
+		//juso = "서울시 강남구 역삼동"; 		//var or let 명령없이, 변수를 생성=> 20라인에서 선언하기 전에 이미 juso를 선언하면, let선언에 위배. 
+		let juso= "서울시 서대문구";				//위에서 이미 생성한 변수와 변수명이 동일하다.=> let이용, juso 변수 선언
+															//let으로 변수를 선언하는 코드가 있다면, 해당 변수는 선언문이 나오기 전에 사용할 수 없다.
+															//let으로 선언된 변수의 사용은 선언 후 사용할 수 있다. 
+		juso = "서울시 강남구 역삼동";
+		console.log(juso);
+		
+		//1-2. let을 이용한 동일한 변수 선언 코드;
+		let address = "서울";							//아래 코드에서 address 동일 변수 선언해서 오류 발생.								
+		console.log(address);
+		
+	let address= "제주";								//let을 사용해서 동일 변수명으로 중복선언 되어져 오류가 발생한다.
+		console.log(address);
+		
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

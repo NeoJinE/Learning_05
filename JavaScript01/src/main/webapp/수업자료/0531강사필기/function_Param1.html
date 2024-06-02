@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_param1.html</title>
+		<script type="text/javascript">	
+			//사용자로부터 예금액과 이자율을 입력받아 : 함수1 - input()
+			//이자를 계산해서 출력해주는 함수 : 함수2 - calInterest(deposit,rate)
+			
+			function calInterest(deposit, rate){//예금액과 이자율를 전달받아서 이자만 계산 후 출력(반환 없음)
+				var interest = deposit * rate / 100 //이자율이어서 퍼센트값으로 전달되므로 / 연산 진행
+				document.write("예금이자 : " + interest +"원");				
+			}			
+			// calInterest(100000, 1);//인수가 있는 호출 - 인수 2개, 함수 매개변수 2개
+			
+			function input(){ //매개변수가 없는 함수
+				var deposit = parseInt(prompt("예금액 입력 : "));//원화는 정수
+				var rate = Number(prompt("이자율 입력 : ")) ; //정수거나 실수가 입력
+				// 이자 계산 함수 호출
+				calInterest(deposit, rate) ; //두 변수에 저장된 실제 값이 인수로 전달
+			}
+		</script>
+	</head>
+	<!-- body 태그가 해석되면 input() 호출 : body 태그 이벤트 속성의 값으로 함수 호출-->
+	<!-- body 태그의 해석은 태그가 준비되면 즉 브라우저에 body 태그가 로드되면 : onLoad 이벤트 속성  -->
+	<body onLoad="input()">
+	
+	</body>
+</html>
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for_ex1.html</title>
+		<script type="text/javascript">
+		//10개의 숫자를 입력 받아서 양수/음수/0인지 판단후 각 갯수를 출력하는 스크립트.
+		//반복문에서 사용할 누적변수는 반복문 전에 생성 후 초기화 되어야 한다.
+		
+		var pos = 0; 			//갯수를 세기 위해서 각 조건의 누적변수를 생성하고 초기화.
+		var neg = 0;			
+		var zero = 0;
+	
+
+		for ( i = 1; i <= 10; i++) {
+		    var num = parseInt(prompt("숫자 " + i + " 입력", "정수 입력"));
+
+		    if (num > 0) {
+		        pos++;
+		        // document.write("양수<br>");
+		    } else if (num < 0) {
+		        neg++;
+		        // document.write("음수<br>");
+		    } else {
+		        zero++;
+		        // document.write("0<br>");
+		    }
+		}
+
+		document.write("양수의 갯수: " + pos + "<br>");
+		document.write("음수의 갯수: " + neg + "<br>");
+		document.write("0의 갯수: " + zero + "<br>");
+		
+	
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

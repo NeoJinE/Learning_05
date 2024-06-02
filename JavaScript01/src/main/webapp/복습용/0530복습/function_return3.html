@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//사용자로부터 두 값을 입력받아 변수에 저장.
+		function input(){
+			num1 = Number(prompt("숫자1 입력   :   "));						//num1전역변수
+			num2 = Number(prompt("숫자2 입력   :   ")); 					//num2전역변수	이기 떄문에, 함수 밖으로 값이 나올 수가 있다. 		
+		}	input(); 																		//return문을 사용하는 이유: 함수내의 변수는 특별한 경우가 아니면, 지역변수로 사용하는 것이 변수 관리에 편하다. 
+																							//함수 내의 변수는 함수 안에서만 사용하도록 관리하는게 일반적이고, 지역변수 사용하는것이 더 좋은 코드.
+		
+		return document.write(`"합계: "${num1+num2}`);
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

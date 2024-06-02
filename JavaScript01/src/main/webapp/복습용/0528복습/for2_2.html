@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		var start = parseInt(prompt("목록 내 항목값의 시작값을 입력 해 주세요", "정수 입력"));
+		var end = parseInt(prompt("목록 내 항목값의 끝값을 입력 해 주세요", "정수 입력"));
+		//ul 태그 내 li 태그내 출력되는 i값의 시작값과 끝값을 입력받아 해당 목록 내 항목을 동적생성하는 스크립트.
+			document.write("<ul type = 'square' > ");
+			//li태그 반복 요소로 생성-사용자가 입력한 횟수(end 변수에 있다.) 만큼 항목 반복 생성.
+			/* for(i = start; i<=end; i++)  (이 조건식을 사용해도 된다)*/
+			for(i = start; i<end+1; i++){ //조건의 관계식 항에 수식이 와도 된다.	
+				document.write("<li> i = " + i + "</li>");	
+			}
+			//3. ul태그 생성(닫는태그)
+			document.write("</ul>");
+			//i<end + 1 : 관계연산자 <, 산술연산자 + 
+			//연산우선순위: 산술연산자 > 관계연산자.
+			//연산순서: (1.) end + 1을 먼저하고, 그 결과값이 i 보다 큰지를 확인하다.
+			
+			
+			//완성본
+			/* 	var start = parseInt(prompt("목록 내 항목값의 시작값을 입력 해 주세요", "정수 입력"));
+			var end = parseInt(prompt("목록 내 항목값의 끝값을 입력 해 주세요", "정수 입력"));
+			document.write("<ul type = 'square' > ");
+			for(i = start; i<end+1; i++){ //조건의 관계식 항에 수식이 와도 된다.	
+				document.write("<li> i = " + i + "</li>")
+				}
+				document.write("</ul>"); */
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

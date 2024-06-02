@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//구구단 출력 프로그램
+		//1단부터 9단까지 출력
+/* 		for(i=1; i<=9; i++){ //단의 반복, 9번
+			for(j=1; j<=9; j++){ // 9번
+				document.write(i + "*" + j +"="+ i*j + "<br>");
+			}
+		} */
+		
+		// 사용자로부터 시작단과 끝단을 입력 받아 입력받은 해당 단 까지의 구구단을 출력하는 프로그램
+		var start = parseInt(prompt("구구단 출력 프로그램 입니다 시작단을 입력하세요","1~9까지의 정수 입력"));
+		var end = parseInt(prompt("끝단을 입력하세요","시작단과 크거나 같아야 합니다. 9까지의 정수 입력")) ;
+		
+		for(i=start; i<=end; i++){  //단의 반복, 9번
+			document.write(i + "단을 출력 합니다.********************<br>");//(1)
+			for(j=1; j<=9; j++){ // 9번	한 단의 출력			
+				document.write(i + "*" + j +"="+ i*j + "<br>");	//(2)			
+			}
+			document.write("<br>"); // 단과 단사이 여백 (3)
+		}	
+		//위 코드에서 (1), (2), (3)번 코드의 실행 횟수를 적으시오
+		// (1)(3)번 코드 : (end+1)-start
+		// (2)번 코드 : ((end+1)-start) * 9
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

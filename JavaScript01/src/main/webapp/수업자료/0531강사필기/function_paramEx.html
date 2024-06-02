@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_paramEx.html</title>
+		<script type="text/javascript">	
+			function input() { //테이블 행,열수를 입력받아 테이블 만드는 함수에게 전달
+				var rows = parseInt(prompt("테이블의 행 수 입력 : ","정수입력")) ;
+				var cols = parseInt(prompt("테이블의 열 수 입력 : ","정수입력")) ;
+				makeTable(rows, cols); // 인수가 있는 함수 호출
+			} // 매개변수 없고 반환값도 없는 함수 - 행열수 입력받고 makeTable 호출하고 종료
+			
+			function makeTable(rows, cols){//전달받은 매개변수값을 이용해 테이블을 만드는 함수
+				//테이블 구성
+				//중첨 for 문 사용 : rows가 3, cols가 5 라면 (1)번 코드의 실행 횟수는? 15번
+				document.write("<table border='1'>");
+				for(var i = 1; i <= rows ; i++){//행수 만큼 반복
+					document.write("<tr>");
+						for(var j = 1; j <= cols; j++)//각 행에 대해 열수만큼 반속
+							document.write("<td>★</td>"); //(1)
+					document.write("</tr>");					
+				}			
+				document.write("</table");
+			} // 매개변수가 있고 반환값은 없는 함수 - 행열수 전달받아 테이블 출력 하고 종료
+		</script>
+	</head>
+	<body>
+	<!-- 위 두 함수중 먼저 실행되어야 하는 input() -->
+	<button onClick="input()">테이블만들기</button>
+	
+	</body>
+</html>
+
+
+
+

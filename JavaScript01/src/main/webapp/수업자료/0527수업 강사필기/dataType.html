@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dataType.html</title>
+		<script type="text/javascript">	
+			var num1=15; //정수, 이 코드가 실행되는 시점에서 num1변수는 정수형 변수가 됨
+			var num2=123.45; //실수, 이 코드가 실행되는 시점에서 num2변수는 실수형 변수가 됨
+			var answer='y'; // 문자, 이 코드가 실행되는 시점에서 answer변수는 문자형 변수가 됨
+			var name = "홍길동"; // 문자열, 이 코드가 실행되는 시점에서 name변수는 문자열형 변수가 됨
+			var address='서울시 종로구 1번지';//문자열형 변수 address
+			var result=true;//논리값, 이 코드가 실행되는 시점에서 result변수는 논리값형 변수가 됨
+			var nothing; //변수 선언만 진행, 값을 대입하지 않음
+			
+			var input=prompt("자료형 예제", "취소 버튼 누르세요");
+			
+			//1. 숫자 연산
+			document.write("<br>정수*실수 : " + (num1 * num2)); //정수보다 실수가 더 큰 공간을 차지함
+			//정수공간에 실수가 들어갈 수는 없음 그러므로 정수 * 실수는 실수의 결과값이 나옴
+			//2. 형변환:parseInt(변수) : 실수값을 정수로 변환
+			document.write("<br>실수를 정수로 형변환 : " + parseInt(num2));//123.45->123
+			//3. 숫자를 문자열로 변환 : num1 + num2 : num1과 num2를 문자열로 바꿔서 + 연산을 진행
+			//문자열 형변환 함수 : String(문자열), 문자열.toString()
+			document.write("<br>숫자를 문자열로 변환 후 + 연산 : " + String(num1) + num2.toString());
+			//4. 문자열 * 문자열 : * 연산자는 수치형 연산자임, 문자열에 적용했을 때 나오는 결과 
+			//수치 사용해야하는 연산자에 문자열을 사용해서 결과값으로 NaN
+			document.write("<br>문자열*문자열 : " + (name * address));
+			//5. nothing 변수를 선언만 해놓고 사용할 때
+			//undefined 출력 - 아무 값도 정의되지 않았음(저장되지 않았음)
+			document.write("<br>변수 선언만 해 놓고 값을 입력하지 않고 사용(nothing) : " + nothing);
+			
+			//6. prompt() 대화상자에서 값 입력 없이 취소 버튼을 누를 경우'
+			//어떤 참조값도 전달되지 않았음 : null
+			document.write("<br>input에 취소버튼 눌렀을때 전달되는 값 : " + input);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
+
+

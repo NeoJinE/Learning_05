@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//1.  f1함수영역
+		function f1 (){
+			var localvar1 = 100; 						// var이용을 통해, 명시적으로 변수를 선언, 동시에 지역변수가 된다.
+			
+	}															//지역변수가 된 localvar1은 해당 중괄호 이상을 벗어날 수 없어 함수의 호출이 불가능하다.
+		
+		function f2 (){
+			 localvar2 = 200;						//var이용없이 변수를 선언., 동시에 전역변수가 된다.(var을 사용하지 x떄문.) 
+			
+
+	}
+		
+		//2.함수호출
+		f1();     												//localvar1의 값 100이 저장된다
+		f2();													//localvar2의 값 200이 저장된다.
+		document.write(localvar1 + "<br>")			//function f1의 영역 밖 이므로 지역변수 localvar1은 사용이 불가능하다., 현재 위치에서 오류가 발생
+		document.write(localvar2);					//22번줄에서 오류가 발생되어, 이 코드는 실행이 되지 않는다.
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	이 코드는 지역변수를 localvar1을 영역 밖에서 사용하여(), 오류난 코드입니다.<br>
+	크롬 개발자 도구f12탭을 눌러, 콘솔을 통해 에러를 확인 할 수 있다. localvar1 is not defined
+	</body>
+</html>

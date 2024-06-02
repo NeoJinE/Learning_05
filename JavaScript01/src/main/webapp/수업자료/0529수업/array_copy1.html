@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			//얕은 복사: 두 변수가 참조 값(메모리 주소)를 공유 하는 방법
+			//1. 동일배열을 같이 사용 하게 된다.
+			var arr = [1, 2, 3];
+			var arrCopy = arr; 	//얕은 복사를 실시하여, 참조 주소를 공유한다.
+			console.log(`원본:${arr}`);
+			console.log(`복사본:${arrCopy}`);
+			console.log(arr===arrCopy);		//동일한 배열인지 확인
+			
+		//2. 원본 보존 해서 복사본은 수정
+		console.log(`복사본 수정`);
+		arrCopy[0] = 100;
+		//복사본 변경 확인
+		console.log(`원본:${arr}`);
+		console.log(`복사본:${arrCopy}`);
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

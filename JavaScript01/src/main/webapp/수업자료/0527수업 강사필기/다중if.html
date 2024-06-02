@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>다중if.html</title>
+		<script type="text/javascript">	
+			// 다중 if는 하나의 변수 값 또는 데이터에 대해서
+			// 어느 구간에 걸리는지 판단하려고 할 때 주로 사용(학점 계산 등)
+			// 사용자에게 점수를 입력받는다
+			var jumsu = parseInt(prompt("점수 입력 : ", "수치값을 입력하지 않으면 에러 발생")) ;
+			
+			// 점수에 따른 등급과 합격여부 판단 : 90점 이상 A, 80점 이상 B, 70점 이상 C ...., 60점 이상 합격
+			if (jumsu >=90) {
+				alert("grade : A");
+				document.write("합격");
+			} else if(jumsu >= 80){
+				alert("grade : B");
+				document.write("합격");				
+			} else if(jumsu >= 70){
+				alert("grade : C");
+				document.write("합격");				
+			} else if(jumsu >= 60){
+				alert("grade : D");
+				document.write("합격");				
+			} else {
+				alert("grade : F");
+				document.write("불합격");				
+			} 
+				
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

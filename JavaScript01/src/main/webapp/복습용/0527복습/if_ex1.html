@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		//*문자열을 숫자형으로 형변환해서 제일 큰수를 출력하는 프로그램*
+		
+		//1.내가 푼 문제
+			//var num1 = prompt("첫번째 숫자를 입력하십시오");				//놓친부분:문자열을 숫자열로 표현시키는 parseInt 생략함.
+		//	var num2 = prompt("두번째 숫자를 입력하십시오");
+			//var num3 = prompt("세번째 숫자를 입력하십시오");
+				//if(num1 > num2 && num1 > num3){
+				//	alert(num1 + `는 최댓값입니다.`)
+					//document.write(`num1은 최댓값입니다.`);	
+			//	} else if(num2>num1 && num2>num3){
+				//	alert(num2 + `는 최댓값입니다.`)
+				//	document.write(`num2은 최댓값입니다.`);
+				//} else{
+				//	alert(num3 + `는 최댓값입니다.`)
+				//	document.write(`num3은 최댓값입니다.`);	
+			//	}
+				
+		//2. 강사풀이
+			alert("서로다른 세 숫자(정수)를 입력하세요.")
+			var num1 = parseInt(prompt("숫자 1 입력" , "수치형을 입력하지 않으면 오류가 발생."));
+			var num2 = parseInt(prompt("숫자 2 입력" , "수치형을 입력하지 않으면 오류가 발생."));
+			var num3 = parseInt(prompt("숫자 3 입력" , "수치형을 입력하지 않으면 오류가 발생."));
+			if(num1 > num2 && num1 > num3){ //num1이 가장 큰 수.
+				max = num1;
+			} else if(num2>num3){//num2가 가장 큰 수.
+				max = num2;
+			} else{//num3이 가장 큰 수.
+				max = num3;
+			}
+			document.write("가장 큰 수는:" + max + "입니다.")
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

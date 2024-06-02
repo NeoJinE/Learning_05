@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			//1.구구단 출력 프로그램.(1단~9단)
+			/* 	for(i = 1; i<=9; i++){
+					for(j = 1; j<=9; j++){
+					document.write(i + "*" + j + "=" + i*j + "<br>");
+					}
+				} */
+			
+				//사용자로부터 시작단과 끝단을 입력받아 입력받은 해당 단 까지의 구구단을 출력
+			var start = parseInt(prompt("구구단 출력 프로그램입니다.구하고자 하는 구구단의 단수를 1~9까지의 정수로 입력하세요"));
+			var end = parseInt(prompt("끝단을 입력하세요.시작단과 끝단이 같아야합니다. 9까지의 정수로 입력하세요"));
+				for(i = start; i<=end; i++){ // (초기식은 입력된start부터 시작하기에 변수는 i값은 start에서 입력된값),( 조건식은 입력된 end에서 끝나기에, 변수i의 조건은 end까지 진행), (증감은 1씩 증가한다.)
+					document.write(i + "단을 출력합니다.============================<br>") //(1)번코드
+						for(j = 1; j<=9; j++){ //한 단의 출력.
+					document.write(i + "*" + j + "=" + i*j + "<br>");	//(2)번 코드
+					}
+					document.write("<br>")// 단과 단 사이의 여백 (3번코드)
+				}
+			//question.   (1번), (2번), (3번)코드는 각각 몇번씩 실행됩니까?
+			//sol). (1번),(3번) - ((end+1)-start)번, (2번) -((end+1)-start) * 9.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

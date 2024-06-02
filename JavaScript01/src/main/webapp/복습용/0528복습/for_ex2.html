@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+		 th{
+		 	background-color:#FF0;
+		 }
+		 td{
+		 	width:100px;
+		 	text-align:center;
+		 }
+		</style>
+
+		<script type="text/javascript">	
+		var start = parseInt(prompt("시작값을 입력해 주십시오"));
+		var end = parseInt(prompt("끝값을 입력해 주십시오."));
+		document.write("<table border = '1'> ");
+		document.write("<tr><th>i</th><th>sum</th></tr>");
+		var sum = 0;  // 누적합을 위한 누적 변수 초기화.
+		for(i = 1; i<=10; i++){
+			sum = sum + i
+			document.write("<tr><td>" + i + "</td><td>" + sum + "</td></tr>");
+			}
+		document.write("</table>");
+		
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for_in.html</title>
+		<script type="text/javascript">	
+		// for~in 은 배열 순회에 적합하게 만들어진 반복문
+		var arr = ["컴퓨터","마우스","키보드","노트북","메모리"];
+		document.write(arr + "<br>");//배열명을 명시하면 배열 내 모든값이 , 로 구분되어 출력
+		// for~in 문 사용 배열 순회
+		for(i in arr){ // arr[0]=컴퓨터, for(i=0; i < 5; i++)
+			document.write("arr["+i+"] = "+ arr[i] + "<br>");
+		}
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

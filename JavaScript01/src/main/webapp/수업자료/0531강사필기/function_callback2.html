@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_callback2</title>
+		<script type="text/javascript">	
+		var call_test = function(){
+			alert("콜백함수로 전달되었습니다");
+		}
+		
+		function test_show(fnc){ //fnc 매개 변수에는 함수가 전달되어야 함(개발자가 정한 규칙)
+			alert('전달된 콜백함수를 실행합니다');
+			fnc() ; //test_show 호출할 때 함수가 전달되었을 것이라 생각하고 만든 코드
+		}
+		
+		//test_show(100);//오류
+		test_show(call_test);//위에서 선언한 익명함수 call_test를 인자로 전달함. 이 시점에서 call_test함수는 콜백함수가 됨
+		// 위 코드로 호출 된 후에 13라인에서 call_test가 호출이 됨
+		// test_show에게 전달되어지는 인자로 call_test의 함수 코드가 전달됨
+		
+		//test_show(call_test()); // call_test 함수를 호출 한 후 test_show 호출- call_test 함수 호출한 결과를 인자로 test_show에 전달
+		//인자로 전달되는 내용이 없음 - call_test는 메시지 출력하고 끝남 - 에러발생
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

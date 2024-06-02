@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prompt_calc.html</title>
+		<script type="text/javascript">	
+			num1 = prompt("첫번째 숫자를 입력하세요 : ");
+			num2 = prompt("두번째 숫자를 입력하세요 : ");
+			alert("당신이 입력한 숫자는 "+ num1 +","+num2+" 입니다. 두 숫자를 더한 결과는 확인 버튼을 누르면 볼 수 있습니다");
+			document.write("두 숫자의 합은? "+(num1+num2)+" 입니다.<br>");
+			document.write("prompt를 통해 입력된 데이터는 문자열입니다. 문자열은 + 결합연산이 일어납니다<br>");
+			document.write("입력된 문자열을 형변환 하면 산술연산을 진행할 수 있습니다<br>");
+			//문자열 변수를 정수로 형변환 후 + 연산 진행
+			document.write("두 문자열 변수를 정수 형변환 후 합은? "+(parseInt(num1)+parseInt(num2))+" 입니다.<br>");
+			//정수 형변환 후 문자열 변수의 값의 type은? 14라인에서의 형변환을 일회성임, num1과 num2의 변수 타입이 문자열에서 바뀌는것은 아니다
+			//변수 타입을 완전히 바꾸려면 num1=parseInt(num1) 과 같이 바뀐 타입 data를 대입해야 계속 유지된다		
+			document.write("형변환 후 계산한 두 숫자의 합을 다시 계산 합니다? "+(num1+num2)+" 입니다.<br>");		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

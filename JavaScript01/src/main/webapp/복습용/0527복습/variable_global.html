@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//전역 변수 영역 
+		var x=5, y = 10   																				// 전역변수 명시적 선언
+		total=0;																								// 전역변수 var 없이 선언
+		
+		
+		
+		
+		//function f1의 영역																			// 함수를 선언하는 코드- 함수가 실행되진 X
+		function f1(){
+			x = x + y; 																						//f1함수에 들어가면서 x값은 x+y=15라는 값으로 다시 정의된다. 이를 x값이 15로 overwrite 되었다 한다. 				
+		document.write(x + "<br>");																	//x,y는 전역변수 이므로 f1함수 내부에서 사용할 수 있다.		
+			
+			
+		}
+		
+		//function f2의 영역
+		function f2(){
+			total = x + y;	//(total = 15+10=25값으로 도출된다.)						//x는 29라인에서 f1함수 호출시 x=15로 변경, y는 어디에서도 값이 바뀌지 않아 y=10
+			document.write(total);																	//total, x, y가 전역 변수 이므로 f2함수 내부에서 사용 가능
+		}
+		
+																											//함수 호출 - 함수는 호출 되어야 실행됨, 호출은 함수이름을 쓴다. 
+		f1();
+		f2();
+		//스크립트 영역에서 출력.		
+		document.write(x + "<br>");
+		document.write(total);		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

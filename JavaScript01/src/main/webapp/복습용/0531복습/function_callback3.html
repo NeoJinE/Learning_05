@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			//일반함수 선언.
+			function endFunction(){
+				console.log("종료");
+			}
+		
+			//매개변수가 2개 있는 일반함수를 선언, 두번쨰 매개변수는 함수코드를 전달받는 매개변수로 사용할 예정. 
+			function showName(name, func){
+				console.log("name: " + name);							//인자로 전달된 name 변수값을 콘솔에 입력.
+				func();														//매개변수명을 이용한 함수를 호출.
+			}
+			
+			//showName을 호출하면서, 두번째 인자에는 endFunction 일반함수명을 전달.
+			showName("이진언",endFunction); 							//함수 이름만 전달 - ()가 없어야 한다.(함수코드를 받으려면, 함수이름만 있어야 한다.)
+																			//함수 코드가 인자로 특정 함수의 매개변수에 전달되면 그 함수가 callback함수이다. =>callback함수는 endFunction.
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

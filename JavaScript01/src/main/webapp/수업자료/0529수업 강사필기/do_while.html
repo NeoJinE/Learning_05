@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>do_while.html</title>
+		<script type="text/javascript">	
+		var answer ; //조건 변수-논리값 저장
+		var count=0 ;//경고창 출력 횟수 count 변수
+		// 사용자의 버튼 클릭 선택에 따라 반복 여부가 결정됨
+		// 반복횟수가 정해져 있지 않고 while 계열의 반복문을 사용
+		do{
+			count++; //경고창이 몇번 출력되었는지 누적횟수 저장하는 변수
+			//count=count+1
+			// 경고창 출력 전에 count 변수는 증가되어야 함
+			alert("경고 : " + count);			
+			answer = confirm("계속 경고창을 보시겠습니까?");//조건값
+		}while(answer);
+		document.write("경고창 출력 횟수 : " + count);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

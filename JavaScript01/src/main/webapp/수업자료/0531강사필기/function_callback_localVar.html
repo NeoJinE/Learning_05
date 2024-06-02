@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_callback_localVar.html</title>
+		<script type="text/javascript">	
+		// 콜백 함수 호출 시 지역변수를 호출 인자 사용할 수 있는가의 여부? 사용가능
+		// 일반 함수 호출 시 지역변수를 호출 인자 사용할 수 있는가의 여부? 사용가능
+		
+		// 전역변수 생성
+		let globalVar = 100 ; //전역변수
+		
+		// 일반함수
+		function show(localVar){
+			console.log(`전역변수 : ${globalVar} / 지역변수 : ${localVar}`);//localVar 13라인의 매개변수 의미
+		}
+		
+		// 일반함수 - callback매개변수에는 함수코드가 전달되어야 함, 함수코드는 매개변수가 1개 있어야 함
+		function call(callback){
+			let localVar = 1; //cll 함수의 지역변수, call 함수 블럭에서만 사용 가능
+			callback(localVar);//지역변수를 함수 호출 시 인자로 사용	, localVar 19라인에서 선언된 변수		
+		}
+		
+		//call 함수 호출 - 인술호 함수코드가 전달되어야 함 - show 함수의 코드 전달
+		call(show) ;
+		// 전역변수 : 100 / 지역변수 : 1 - 지역변수의 1은
+		// 20라인에서 전달된 localVar 값 1 이 13라인의 매개변수 localVar저장 -> 14라인에서 출력됨
+		//위 전체코드에서 콜백함수로 사용된 함수 이름은? show - 함수이름을 호출할때 인자로 전달함
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

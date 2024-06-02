@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		
+		 function makeTable(){
+			 var table = input();
+			 document.write(`<table border = "1">`);
+			 document.write(`<tr><td>${input(num1,num2)}</td></tr>`);
+			 document.write(`</table>`)
+		 }		 
+	
+		
+		
+		
+		
+			function input(num1,num2){
+			 var num1 = parseInt(prompt("테이블의 행을 입력"));
+			 var num2 = parseInt(prompt("테이블의 열을 입력"));
+			 
+			 for (i = 1; i<=num1; i++){
+					for(j = 1; j<=num2; j++){
+						document.write("★");
+					}
+					document.write("<br>");
+				}
+			 return table;
+		} 
+	
+		
+		  
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	<button onClick = "input()">테이블 만들기</button>
+	</body>
+</html>

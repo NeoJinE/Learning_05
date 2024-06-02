@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_default_param.html</title>
+		<script type="text/javascript">
+		// 디폴트 매개변수가 있는 함수
+		// 인수가 전달되지 않으면 기본 값을 사용
+		// 인수가 전달되면 전달 받은 값으로 사용
+		function rect(width=10, height=20){
+			document.write("width : " + width);
+			document.write("height : " + height);
+			return width * height ;
+		}
+		
+/* 		console.log(rect());//인수없이 호출 기본값으로 함수 실행
+		console.log(rect(30));//첫번째 전달되는 인수는 첫번째 매개변수에 저장, width는 전달된 값 height는 기본값
+		console.log(rect(30,15));//인수 모두 전달하면 전달된 인수 값으로 함수 실행 */
+		
+		function showInfo(name, year=4, score){
+			document.write("name : " + name + "<br>");
+			document.write("year : " + year + "<br>");
+			document.write("score : " + score + "<br>");
+		}
+		
+		// console에 showInfo가 반환하는 값을 출력, showInfo는 반환값이 없음, undefined 가 출력
+		console.log(showInfo()); //전달되는 인수 없음 name은 undefined year는 기본값 score는 undefined
+		console.log(showInfo("홍길동"));//name은 홍길동 year는 기본값 score는 undefined
+		console.log(showInfo("홍길동", 80)) ;//name은 홍길동 year는 80 score는 undefined
+		
+		
+		//디폴트 매개변수를 뒤로 보냄=----------------------------------------
+		function showInfo(name, score, year=4){
+			document.write("name : " + name + "<br>");
+			document.write("year : " + year + "<br>");
+			document.write("score : " + score + "<br>");
+		}
+		
+		// console에 showInfo가 반환하는 값을 출력, showInfo는 반환값이 없음, undefined 가 출력
+		console.log(showInfo()); //전달되는 인수 없음 name은 undefined score는 undefined year는 기본값 
+		console.log(showInfo("홍길동"));//name은 홍길동 score는 undefined year는 기본값 
+		console.log(showInfo("홍길동", 80)) ;//name은 홍길동 score는 80 year는 기본값		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

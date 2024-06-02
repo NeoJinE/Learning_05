@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//함수호출 후에 함수 선언이 가능한가?=> 함수 선언 이전에 함수의 호출이 가능한지?
+		//함수 내에서 다른 함수 호출시에는 미리 선언되어 있지 않아도 호출가능(function2_1)
+		changeColor();
+		function changeColor(){
+			var color = prompt("색상 입력.: red/blue/green");			//color: 지역변수
+			document.write(`${color} "로 배경색을 바꿉니다."`)		//화면(body)에 출력=> document는 브라우저의 body부분.(**배경색을 바꾸는 방법: document.bdcolor 속성의 값을 특정색으로 변경.)
+			document.bgColor = color; 																						
+		} 
+		
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

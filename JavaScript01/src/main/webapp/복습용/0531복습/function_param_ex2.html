@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//함수1=> input(): 숫자 5개를 입력받아서 배열에 저장한 후, max()함수에게 배열을 전달하고, 반환받은 값을 출력.
+		//함수1은 매개변수 & 반환값 둘 다 없다.
+		function input(){
+			var nums = new Array(5)								//크기가 5의 값인 배열 객체변수 nums선언&생성
+			for(i=0; i<nums.length; i++){
+				nums[i] = parseInt(prompt("숫자" +(i+1)+ "를 입력"));
+			}
+			document.write(`최대값:${max(nums)}`); 				//max함수를 호출하고, 반환된 값(return값)을 가지고 출력. 
+		}
+		
+
+		
+		//함수2=>max(): 배열을 전달받아서(매개변수가 필요), 최대값을 구하고, 구한 최대값을 호출한 함수로 반환한다.(return)
+		//함수2는 매개변수& 반환값 둘 다 필요하다.
+				function max(nums){
+			var maxnum = 0;										// 제일 큰 값을 저장할 변수 maxnum은 임의값 0으로 저장한다.(비교의 기준이 된다.)
+																	//배열이 전달되었기에, 반복문을 이용해서 순회시, maxnum에 현재 저장값보다 큰 값을 만나면, maxnum의 값을 변경한다. 
+																	
+																
+			for(i=0; i<nums.length; i++){//ex). nums의 값이 5 8 7 3 9 라 가정시,	
+				if(nums[i]>maxnum){		// 첫번째. 0과 5를 비교, 두번째 5와 8을 비교, 세번째 8과 7을 비교, 네번째 8과 3을 비교, 마지막으로 8과 9를 비교한다.=>최종적으로 최대값 9 가 출력된다. 		
+					maxnum =nums[i];		//27번라인에서 idx0번숫자와 maxnum(초기설정한값 0) 을 비교후, 0보다 크면 maxnum은 idx1의 값으로 바뀌고, 해당을 배열한 idx까지 반복하며, idx1과 비교후 큰 값을 출력한다. 
+				}
+			}
+			return maxnum;
+		}
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body onLoad = "input()">
+	<!-- load 될 때 input함수를 호출한다. -->
+	</body>
+</html>

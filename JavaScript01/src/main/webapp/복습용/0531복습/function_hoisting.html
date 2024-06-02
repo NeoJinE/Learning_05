@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_hoisting.html</title>
+		<script type="text/javascript">	
+		//호이스팅: 함수가 정의 되기 전에 먼저 호출(사용)
+		show();		//1. 동일 문서내 함수를 검색. 2.외부링크 js파일에서 검색을 한다. 3.Js 내장함수를 검색.=> 이런 과정에도 함수선언이 없으면 에러를 낸다.
+						//함수검색: 호출 이전에 나오는 코드에서 검색원칙=> 호이스팅 도입 이후부터는 앞으로 실행되어야 할 코딩 에서도 검색.
+						//나중에 정의된 함수.
+		function show(){
+			alert("show() 함수입니다.");					
+		}
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

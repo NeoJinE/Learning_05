@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+			
+			//callback함수는  함수1의 인자를 함수2로 넣었을때 인자로 사용된 함수2를 의미한다.(=> 함수1에서 인자를 함수2를 넣음=>함수1에 함수2의 코드를 함수1의 값에 넣음 => 함수1에 함수2의 코드를 적용후 함수1이 출력된다. ) 
+			//익명함수
+			var callback = function(){
+				alert("익명 함수 입니다.")
+			};
+			
+			//매개변수로 함수를 받는 함수 =>코드적으로 매개변수를 함수로 명시할 수는 없다. 
+			//매개변수 1개의 함수 => 매개변수는 아무거나 와도 된다(매개변수에 저장되는 데이터형은 구분이 없다.=> 그렇기에 함수가 와도 된다.)
+			
+				
+		
+			
+			//전달된 매개변수를 호출해서 실행하는 함수 -매개변수 인자로 함수가 와야 함.
+			function show2(cb){								
+				cb();														//이 cb은 show2함수의 매개변수 이름이 cb이라 변수명을 이용해서 호출한 것.	
+			}																//만약 매개변수 함수가 아닌 일반값이 전달이 되면, 에러가 발생한다. 
+			
+			show(callback);	
+		
+			//매개변수로 전달받은 함수를 실행시키는 기능 => show함수는 매개변수의 인자는 함수가 와야한다. 
+			function show(callback){								
+				callback();												//이 callback은 show함수의 매개변수 이름이 callback이라 변수명을 이용해서 호출한 것.		
+			}
+			
+			show(callback);												//show함수 호출. 단, 매개변수의 인자가 함수여야 하므로, 매개변수로 익명함수 변수를 전달.
+																			//show 함수 호출시, 전달되는 인자가 익명함수의 변수가 전달됨. 이 때 전달된 익명함수를 callback함수라 칭함. 		
+			
+			show2(callback);												//callback 익명함수가 show2 함수에 cb로 전달되고, 함수 코드내에서 cb()에 의해 결국 callback()익명함수 전달.											
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

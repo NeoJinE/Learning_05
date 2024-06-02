@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_callback3.html</title>
+		<script type="text/javascript">	
+		// 일반함수 정의
+		function endFunction(){
+			console.log("종료");
+		}
+		
+		//일반함수 정의 : 매개변수가 2개있는 일반함수 단, 두번째 매개변수는 함수코드를 전달받는 용도로 사용할 예정
+		function showName(name,func){
+			console.log('name : ', name); // 인자로 전달된 name 변수값을 콘솔에 출력
+			func(); //매개변수 이름을 이용한 함수 호출
+		}
+		
+		//showName 호출하면서 두 번째 인자에는 endFunction 일반함수명을 전달
+		showName('성춘향', endFunction); //함수이름만 전달 - ()가 없어야 함
+		// 위 전체 코드에서 어느 함수가 콜백함수 인가? 함수 코드가 인자로 특정 함수의 매개변수에 전달되면 그 함수가 콜백함수
+		//endFunction
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

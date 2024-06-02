@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		// 크기가 4인 배열 colors 선언
+		var colors = new Array(4);
+
+		// 사용자로부터 4개의 색상을 입력 받아 배열에 저장
+		for (var i = 0; i < 4; i++) {
+		    colors[i] = prompt((i + 1) + "번째 색상을 입력하세요:");
+		}
+
+		// 배열에 들어 있는 값들을 목록으로 출력
+		document.write("<ul>");
+		for (var i in colors) {
+		    document.write("<li>" + colors[i] + "</li>");
+		}
+		document.write("</ul>");
+
+
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

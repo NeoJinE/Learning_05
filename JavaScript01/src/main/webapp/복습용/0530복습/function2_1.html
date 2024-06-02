@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+	
+		
+		//1번함수. (일반함수): 사용자한테 배경색 교체 여부를 묻고, 확인버튼 누르면 배경색 변경.
+		 function start (){
+			var answer = confirm("배경색을 변경하시겠습니까?");										//answer에 입력되는 값의 종류 => T/F.
+				if(answer){ 																				//연산은 반환값이 T/F입니다. =>if문의 조건은 T/F이면 됨. answer는 어짜피 T/F값이 들어 있으므로, ==연산을 할 필요가 없다.
+					changeColor();																					//함수 내에서 또 다른 함수 호출: 호출되는 함수가 나중에 (뒤에) 선언했음, 함수 선언 전 
+				}else{
+					alert("취소하셨습니다.");
+				}
+		} 
+		
+		//2번함수. (일반함수): 사용자가 색상명을 입력하면, 입력된 색상명으로, 배경색을 바꾸는 함수. 
+		function changeColor(){
+				var color = prompt("색상 입력.: red/blue/green");			//color: 지역변수
+				document.write(`${color} "로 배경색을 바꿉니다."`)		//화면(body)에 출력=> document는 브라우저의 body부분.(**배경색을 바꾸는 방법: document.bdcolor 속성의 값을 특정색으로 변경.)
+				document.bgColor = color; 																						
+			} 
+			start();
+		
+			//**함수내에서 함수 호출 시 아직 선언하지 않은 함수를 호출할 수 있는지?
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

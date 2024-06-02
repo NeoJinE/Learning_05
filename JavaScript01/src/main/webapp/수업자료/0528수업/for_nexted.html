@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for_nexted</title>
+		<script type="text/javascript">	
+		//반복의 방향이 x y 두방향으로 갈 때 중첩for문을 이용해 해결 할 수 있다.
+			for(i = 1; i<=4; i++){
+				for(j = 1; j<=7; j++){
+					document.write("<img src =\"image/apple.png\">");
+				} //apple.png를 7개 출력 (1개의 행 생성)(이미지는 인라인태그이기떄문에.)
+					document.write("<br>"); //apple.png 7개 항 행에 출력 후 다음줄로 커서 이동.
+				 //위 코드의 실행 횟수는? = )
+			}
+				 	document.write("<hr>")
+				 	//그림이 번갈아 나타나는 스크립트, 이미지는 4행 7열로 표시한다.
+				 	for(i = 1; i<=4; i++){
+				 		for(j = 1; j<=7; j++){
+				 			if(j%2==0){
+				 				document.write("<img src =\"image/bomb.png\">");
+				 			} else {
+				 				document.write("<img src =\"image/apple.png\">");
+				 			}
+				 		}
+				 		document.write("<br>")
+				 	}
+				 
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

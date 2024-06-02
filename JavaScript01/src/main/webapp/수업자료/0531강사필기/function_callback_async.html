@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function_callback_async.html</title>
+		<script type="text/javascript">	
+		//비동기적으로 콜백함수 호출
+		//호출된 순서와 동일하게 결과가 출력되는지(종료되는지)
+		//호출은 순서대로 되었지만 호출된 함수의 종료는 순서적이지 않음(비동기적)
+		//호출순서 : 작업1->작업2->작업3  종료순서 작업1->작업3->작업2 : (작업3은 작업2가 종료되기 전에 호출되고 종료됨))
+		
+		//일반함수
+		function cb(){
+			console.log('콜백함수 호출됨');
+		}
+		
+		//작업 나열(함수의 호출)
+		
+		//1번 작업
+		console.log('콜백 함수 호출 전 호출된 함수');
+		
+		//2번 작업 - 자바스크립트 내장함수 setTimeout(함수명, 시간):정해진 시간이 경과되면 전달된 함수를 실행
+		//setTimeout : 전달되어지는 특정함수의 호출 시점 정할 수 있음
+		// cb 함수를 setTimeout 함수 호출되고 3초후에 호출되도록 구성
+		setTimeout(cb, 3000); //setTimeout 함수는 지금 호출되고 3초후에 cb 호출하고 종료됨
+		// cb가 콜백함수로 사용
+		
+		//3번 작업
+		console.log('콜백 함수 호출 후 호출된 함수 즉, setTimeout 함수 호출 된 후 호출된 함수')
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

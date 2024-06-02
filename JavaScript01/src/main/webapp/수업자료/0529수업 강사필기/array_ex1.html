@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>array_ex1.html</title>
+		<script type="text/javascript">	
+			var colors = new Array(4) ;//크기가 4인 배열 colors를 선언하고
+			
+			for(var i=0; i<colors.length;i++)
+				colors[i] = prompt("색상입력");//사용자가 입력한 값이 문자열로 반환 배열에 문자열 원소가 저장
+			//배열에 들어 있는 값들을 목록으로 출력
+			document.write("<ol type=\"A\">");//여는 ol 태그-순서가 있는 목록
+			
+			//colors 배열의 원소수 만큼 반복 하면서 각 원소값을 항목으로 출력
+			for(var i=0; i<colors.length;i++)
+				document.write("<li>" + colors[i] + "</li>")
+				
+			document.write("</ol>");//닫는 ol 태그	
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

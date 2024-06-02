@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+		//3)함수호출=> 태그의 이벤트 속성 값으로 함수호출코드 작성.
+		//함수 선언은 script태그 내 이거나, js파일 에서 선언해야 함.
+			function input(){
+				var color = prompt("색상입력:red/blue/yellow");
+				document.bgColor=color;
+		}
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	<!-- onClick: 버튼태그의 클릭 이벤트 속성, 버튼을 클릭하면, -->
+	<!-- 이벤트 속성의 값 "input()" <script>태그 내에서 만들어진 input함수 호출 Js코드로, input함수를 호출하는 의미를 갖는다.-->
+	<button onClick = "input()">색상입력</button>
+	</body>
+</html>

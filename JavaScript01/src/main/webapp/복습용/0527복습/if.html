@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if.html</title>
+		<script type="text/javascript">
+			var id = "abcd";
+			var pw = "1234";
+			
+			var input_id = prompt("아이디 입력");
+			var input_pw = prompt("패스워드 입력");
+			
+			
+			//if 문 예제
+			//사용자가 입력한 id와 pw의 값이 변수에 저장된 값과 일치하면(조건식)
+			//xx(id)님 반갑습니다 라는 메시지 출력.(참일때 실행할 문장)
+			if(id==input_id && pw==input_pw){
+				alert(input_id + "님 반갑습니다!!!")
+			}
+			
+			//else~if문 예제
+			//사용자가 입력한 id와 pw의 값이 변수에 저장된 값과 일치하면(조건식)
+			//xx(id)님 반갑습니다 라는 메시지 출력.(참일때 실행할 문장)하고, 조건식이 참이 아니면(참이 아닐때 실행할 문장)
+			//아이디 또는 비밀번호가 일치하지 않습니다라는 메시지 출력
+			//브라우저에 로그인 실패 출력.
+			if(id==input_id && pw==input_pw){
+				alert(input_id + "님 반갑습니다!!!")
+				document.write + ("로그인 성공.")
+			}else {
+				alert("아이디 또는 비밀번호가 일치하지 않습니다.")
+				document.write("로그인 실패.")
+			}
+			
+			//중첩 if 문 예제
+			var input_id = prompt("아이디 입력");
+			var input_pw = prompt("패스워드 입력");
+			
+			
+			//사용자가 입력한 id와 pw의 값이 변수에 저장된 값과 일치하면(조건식)
+			//xx(id)님 반갑습니다 라는 메시지 출력.(참일때 실행할 문장)
+			if(id==input_id && pw==input_pw){
+				alert(input_id + "님 반갑습니다!!!")
+			}
+
+			//사용자가 입력한 id와 pw의 값이 변수에 저장된 값과 일치하면(조건식)-1번 if문
+			//xx(id)님 반갑습니다 라는 메시지 출력.(참일때 실행할 문장)하고, 
+				//수도를 맞추는 문제를 출력해서
+				//정답이면 -2번if(조건식): 중첩if
+					//정답입니다를 출력
+				//정답이 아니면(else) 틀렸습니다를 출력
+			//1번 if의 else 조건식이 참이 아니면(참이 아닐때 실행할 문장)아이디 또는 비밀번호가 일치하지 않습니다라는 메시지 출력
+			//브라우저에 로그인 실패 출력.
+			if(id==input_id && pw==input_pw){
+				alert(input_id + "님 반갑습니다!!!");
+				var answer = prompt("대한민국의 수도는?");
+				if(answer=="서울"){ //2번 if문장
+					document.write("<br>정답입니다.")
+				}else{//2번 if에 대한 else
+					document.write("틀렸습니다. 대한민국의 수도는 서울입니다.")
+				}
+				
+			}else {//1번 if의 else
+				alert("아이디 또는 비밀번호가 일치하지 않습니다.")
+				document.write("<br>로그인 실패.")
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

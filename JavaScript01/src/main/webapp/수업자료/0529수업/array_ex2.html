@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+      table td{
+        width:100px;
+        text-align:center;
+      }
+  		</style>
+		<script type="text/javascript">
+		//1. 크기가 4인 배열 names선언
+			var names = new Array(4);
+		//2. 4개의 이름을 입력받아 배열에 저장,후
+				for(i=0; i<4; i++) //for(i = 0; i<names.length; i++)											값을 넣어도 동일하다.
+					names[i] = prompt("학생" +(i+1)+ "입력" );
+		//3. 배열에 들어 있는 값들을 테이블로 출력.			
+					/* document.write("<table border = '1'>");
+						for(i = 0; i<names.length; i++)
+						document.write("<tr><td>" + (i+1)+ "</td> <td>" + names[i] + "</td></tr>");
+					document.write("</table>"); */
+			//=====================================================================================================================
+				
+			//(**)for ~ in문으로 표현하기.=>배열의 전체 접근 (순회)시, for in문이 더 활용적이다. 
+							
+					/* document.write("<table border = '1'>");
+					for(i in names) 															//i값을 0부터 적용, names 배열 변수에 있는 idx값이 한번씩 적용.
+					document.write("<tr><td>" +(parseInt(i)+1)+ "</td> <td>" + names[i] + "</td></tr>");
+				document.write("</table>"); */
+				
+			//=======================================================================================================================
+					
+			//(**)document.write에 출력 기호 사용해서, 출력 문자열을 생성
+			//1.출력 기호(` `) - 글자를 모양 그대로 출력을 원할시 사용.. ex).`<tr><td>`
+			//2.출력기호${변수 or 연산식.}: - 변수나 연산 식의 결과를 출력하기 위함. ex).`test: ${1+2}` => test = 3.
+					document.write("<table border = '1'>");
+						for(i = 0; i<names.length; i++)
+						document.write(`<tr><td> ${i+1} </td><td> ${names[i]} </td></tr>`);						//${i+1} =>연산식.  ${names[i]}=>변수를 출력.
+					document.write("</table>"); 
+					
+					
+					
+					
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

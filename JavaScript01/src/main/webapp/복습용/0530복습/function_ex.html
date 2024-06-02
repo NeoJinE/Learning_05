@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">	
+	 	/* function input(){
+			var num = parseInt(prompt("숫자입력"));
+			show();																				//여기에 show();를 넣던가		
+	}
+																					
+		function show(){
+		 		input();																			//여기에 input(); 둘 중 하나만 넣어라.
+			 for(i=0; i<=num; i++){
+			document.write("★")		 														
+			 }																						
+		 }  */																						
+	
+			
+		//강사풀이
+		function input(){
+			num = parseInt(prompt("출력할 별의 수를 입력하세요."));	
+			show();
+			}
+		function show(){
+				for(i=1; i<=num; i++){
+					//document.write("★")														//body태그내 요소 새로 생성하는 개념-기존 태그 요소 지워지고, 동적으로 생성한 문자들만 남게된다.
+					document.body.innerHTML +="★";											//기존 html 요소들을 유지하면서, 새로 동적 추가 DOM객체 사용.
+				}																					
+		}
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	<!-- 1. input/show 함수 중 먼저 호출할 함수 -->
+	<!-- 2.먼저 물어보고 (input)출력(show)가 나와야 한다. :버튼을 클릭하면, show()를 호출하라. -->
+	<button onClick = "input()">숫자입력</button>  
+	</body>
+</html>

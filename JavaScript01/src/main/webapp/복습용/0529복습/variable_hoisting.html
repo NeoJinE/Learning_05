@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable_hoisting</title>
+		<script type="text/javascript">	
+		//var 과 let의 호이스팅
+		//1.var은 호이스팅이 가능하다.(변수 선언전에 변수를 사용가능 => 선언전에 변수를 위한 메모리를 할당받는다.)
+		console.log(name)					//name출력코드 선 입력.		
+		var name = "홍길동"				//변수name을 선언 및 저장. 
+		
+		//2.let은 호이스팅이 불가능하다.
+		console.log(name2)					//name2변수 선언 초기화 하기전 먼저 사용이 불가능 => 에러가 발생.		
+		let name2 = "홍길동"				//변수name을 선언 및 저장.
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

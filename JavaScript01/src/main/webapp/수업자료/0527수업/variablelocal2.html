@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>variable_local.html</title>
+		<script type="text/javascript">	
+		//1.  f1함수영역
+		function f1 (){
+			var localvar1 = 100; 						// var이용을 통해, 명시적으로 변수를 선언, 동시에 지역변수가 된다.
+			document.write(localvar1 + "<br>")		//localvar1이 f1함수 내에 존재하기에 값을 도출할 수 있다.
+	}															//지역변수가 된 localvar1은 해당 중괄호 이상을 벗어날 수 없어 함수의 호출이 불가능하다.
+		
+		function f2 (){										//f2함수 영역이므로, 다른 함수의 지역변수를 사용할 수 없습니다.
+			 localvar2 = 200;								//var이용없이 변수를 선언., 동시에 전역변수가 된다.(var을 사용하지 x떄문.) 
+			document.write(localvar2);	
+
+	}
+		
+		//2.함수호출
+		f1();     												//localvar1의 값 100이 저장된다
+		f2();													//localvar2의 값 200이 저장된다.
+		//document.write(localvar1 + "<br>");  			
+		document.write(localvar2);					
+		
+		
+		
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	이 코드는 지역변수인 localvar1을 f1함수 내에서 사용했습니다.
+	</body>
+</html>

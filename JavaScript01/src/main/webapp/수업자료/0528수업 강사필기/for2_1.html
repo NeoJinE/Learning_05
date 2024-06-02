@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>for2_1.html</title>
+		<script type="text/javascript">	
+		var end = parseInt(prompt("목록 내 항목을 몇 개 생성할지 입력 해 주세요","정수 입력"));
+		// ul 태그 내 li 태그를 사용자가 원하는 횟수만큼 반복 생성
+			document.write("<ul type='square'>");
+			// li 태그 반복 요소로 생성 - 사용자가 입력한 횟수(end 변수) 만큼 항목 반복 생성
+			for (i=0; i<end ;i++){
+			document.write("<li> i = "+ i + "</li>");//li 태그 반복이용한 동적 생성
+			}
+			// ul 태그 생성(닫는 태그)
+			document.write("</ul>")		
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
