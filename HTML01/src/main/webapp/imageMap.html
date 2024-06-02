@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 맵</title>
+</head>
+<body>
+	<img src = "image/메인.png" border = "1" usemap = "#cityMap">												<!-- map태그와 img태그 연결 -->
+		<map name = "cityMap">																								<!-- map영역생성:  area태그 coords = "왼쪽상단 오른쪽하단 좌표" -->
+			<area shape = "rect" coords = "60,90 , 250,150" href = "move/뉴욕.html">						<!-- 그림판을 이용하면 좌표값을 얻기 쉽다-->
+			<area shape = "rect" coords = "310,90 , 500,150" href = "move/파리.html">	
+			<area shape = "rect" coords = "560,90 , 750,150" href = "move/로마.html">	
+			<area shape = "rect" coords = "810,90 , 1000,150" href = "move/베이징.html">															
+		</map>
+</body>
+</html>

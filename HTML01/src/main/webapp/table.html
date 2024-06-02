@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style> 
+td {width:100px} 
+</style>
+</head>
+<body>
+		<table border = "1">                                   																			<!--table border: 테이블의 테두리설정 태그. -->
+			<caption>테이블1</caption>																								<!-- caption: 테이블을 정의하는 태그 -->
+				<tbody align = "center">																								<!-- tdoby align = "center": 표 본문내용 모두 가운데 정렬이 적용된다. align: 정렬태그, --> 
+					<tr><th>a</th><th>b</th><th>c</th><th>d</th></tr>														<!-- th:테이블의 헤더(제목)태그.-->
+					<tr><td rowspan = "3">a1</td><td>b1</td><td>c1</td><td>d1</td></tr> 						<!-- tr:행 태그, td: 열 태그,  rowspan : 열을 n셀 합치는(확장되는) 태그 -->
+					<tr><td>b2</td><td>c2</td><td>d2</td></tr>																<!-- 확장으로 인해 합해진 열은 삭제해준다. -->
+					<tr><td>b3</td><td>c3</td><td>d3</td></tr>
+					<tr><td colspan = "4">a4</td></tr>																			<!-- colspan = "n": 행을 n셀 합치는(확장하는)태그, 확장으로 인해 합해진 행은 삭제해준다. -->
+				</tbody>
+		</table>
+		<table border = "1">
+			<caption>테이블2</caption>
+				<thead align = "center">
+		     		<tr><td>a1</td><td>b1</td><td>c1</td><td rowspan = "4">d1</td></tr> 
+		     		<tr><td>a2</td><td></td><td>c2</td></tr>
+			 		<tr><td>a3</td><td>b1</td><td>c3</td></tr>
+			 		<tr><td>a4</td><td>b4</td><td>c4</td></tr>
+			</thead>
+		</table>
+		<table border = "1">
+			<caption>테이블3</caption>
+				<thead align = "center">
+					<tr><th>a</th><th>b</th><th>c</th><th>d</th></tr>
+					<tr><td rowspan = "4">a1</td><td colspan = "3">b1</td></tr>
+					<tr>									  <td>b2</td><td>c2</td><td>d2</td></tr>
+			 		<tr>									  <td rowspan ="2">b3</td><td>c3</td><td rowspan = "2">d3</td></tr>
+					<tr>																		  <td>c4</td></tr>
+				</thead>	
+		</table>
+</body> 
+</html>

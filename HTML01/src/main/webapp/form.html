@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form.html</title>
+</head>
+<body>
+		<form method = "post" action = "netMember.jsp"> 																					<!-- post:정보값이 주소줄에 전달되지x get:정보값이 주소줄에 전달된다. --><!-- jsp 파일: 백엔드 영역. -->
+		<!-- 이 영역에서 발생되는 정보는 newMember.jsp로 전달이 됨. -->
+			<p>label 태그 사용하지 않은 경우: 입력양식 자체를 클릭해야 선택됨.</p>
+			성명<input type = "text" id = "name" size = "10" autofocus>																	<!-- autofocus: 페이지 시작시 자동으로 커서 선택 -->
+				  <input type = "text" id ="prdNo" hidden>																					<!-- hidden: 입력양식이 보이지 않음 -->
+				  <input type = "text" id = "id" size = "10" placeholder = "힌트를 보여줌">
+		<hr>
+		<p>label 태그 사용한 경우</p>																											<!-- label태그: 정보를 보여주기 위한 목적. -->
+			<label>성명<input type = "text" id = "name" size = "10" autofocus></label>												<!-- autofocus: 페이지 시작시 자동으로 커서 선택 -->
+				  <input type = "text" id ="prdNo" hidden>																					<!-- hidden: 입력양식이 보이지 않음 -->
+			<label>힌트	<input type = "text" id = "id" size = "10" placeholder = "힌트를 보여줌" required></label>			<!-- required: 입력이 되어있지 않을시, 서버전송이 불가능. 필수 입력사항은 required속성 설정을 해야한다.-->
+			<label>힌트	<input type = "text" id = "id" size = "10" value = " 편집불가" readonly></label>
+			
+			<hr>
+			
+			<p>패스워드 입력양식</p>
+			<label>비밀번호.<input type = "password" name = "pass" size = "4"> </label>																<!-- label은 서버에서 처리 후 전달된 정보를 label안에 표현 할 수 있다. -->
+			
+			<hr>
+			
+			<p>라디오 입력 양식</p>
+			<label>라디오 버튼: 여러 항목 중에 한개를 선택, 단 name속성의 값이 같아야 한다.</label>				<!-- name이 같으면 하나의 동일한 그룹으로 묶인다. -->
+			
+			<hr>
+																										
+			<p>label 태그 사용한 경우(라디오버튼):입력양식의 선택범위가 넓어짐</p>
+			<label><input type = "radio" name = "year" value checked = "1">1학년</label>
+			<label><input type = "radio" name = "year" value = "2">2학년</label>
+			<label><input type = "radio" name = "year" value = "3">3학년</label>
+			<hr>
+			<p>label 태그 사용하지 않은 경우(라디오버튼):입력양식의 선택범위가 넓어짐</p>
+			<input type = "radio" name = "year" value = "1">1학년
+			<input type = "radio" name = "year" value = "2">2학년
+			<input type = "radio" name = "year" value = "3">3학년
+			
+			<hr>
+			
+			<p>체크박스 입력 양식: 다중선택가능</p>
+			<input type = "checkbox" name = "hob" value checked= "g">게임														<!-- value 뒤에 checked를 입력시, 기본적으로 선택이 되어있는 상태가 된다. checked태그는 사용자가 선택하지 않아도 반드시 기본값으로 받아야 하는 경우에 사용한다. -->
+			<input type = "checkbox" name = "hob" value = "b">영화 
+			<input type = "checkbox" name = "hob" value = "m">독서
+			
+			<hr>
+			
+			<p>드롭다운표시 Select 태그 입력양식:단일양식</p>
+			여행하고 싶은 나라:
+			<select name = "nation">
+				<option value = "A">미국</option>
+				<option value = "C">중국</option>
+				<option value = "H">호주</option>
+				<option value = "E">기타</option>
+			</select>
+			
+			<hr>
+			<p>여러줄 입력: textarea.</p>
+			자기소개 : <br>
+			<textarea rows = "10" cols = "50" name = "content"> </textarea>
+			
+			<hr>
+			
+			<p>첨부파일 양식: type = "file"</p>
+			<input type = "file">
+			
+			<hr>
+			
+			<p>이메일 양식: type = "email"</p>
+			<label>이메일</label><input type = "email">
+			
+			<hr>
+			
+			<p>버튼타입: button, image, submit, reset</p>
+			<input type = "button" value = "확인">						<!-- 일반버튼: 개발자가 프로그램 해야 함. -->
+			<input type = "image" src="image/cart.jpg">				<!-- 일반버튼과 동일하나, 이미지를 버튼으로 사용 -->
+			<input type = "submit" value = "전송"> 					<!-- 사용자가 클릭시, 서버 전송이 발생한다. -->
+			<input type = "reset" value = "취소">						<!-- 입력양식의 내용 모두 지우고 초기화. -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</form>
+		<form method = "post" action = "netMember.jsp">
+		
+		</form>
+	
+</body>
+</html>

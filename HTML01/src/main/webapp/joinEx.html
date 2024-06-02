@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>과제</title>
+<style>
+
+</style>
+</head>
+<body>
+	<h1 align = "center">회원가입</h1>
+	<hr>
+	<table>
+		<thead>
+			<tr>
+				<td width = "160px"><label for = "name">성명</label></td>
+				<td><input type = "text" id = "name" autofocus></td>										
+		   </tr>
+		   <tr>
+		   		<td><label for = "userid">아이디</label></td>
+		   		<td><input type = "text" id = "userid"><input type = "button" value = "중복확인">(영문자+특수문자:6~10자.)</td>
+		   </tr>
+		   <tr>
+		   		<td><label for = "userpwd">비밀번호</label></td>
+		   		<td><input type = "password" id = "userpwd">(영문자+숫자+특수문자:10~20자)
+		   </tr>
+		   <tr>
+		   		<td><label for = "checkpwd">비밀번호확인</label></td>
+		   		<td><input type = "password" id = "checkpwd">
+		   </tr>
+		   <tr>
+		   		<td>생년월일</td>
+		   		<td><input type = "number" id = "birth">년
+		   				<select name = "month" id = "month">
+		   					<option value = "1월">1
+		   					<option value = "2월">2
+		   					<option value = "3월">3
+		   					<option value = "4월">4
+		   					<option value = "5월">5
+		   					<option value = "6월">6
+		   					<option value = "7월">7
+		   					<option value = "8월">8
+		   					<option value = "9월">9
+		   					<option value = "10월">10
+		   					<option value = "11월">11
+		   					<option value = "12월">12
+		   				</select>월
+		   				<select name = "date"id = "date">
+		   					<option value = "1일">1
+		   					<option value = "2일">2
+		   					<option value = "3일">3
+		   					<option value = "4일">4
+		   					<option value = "5일">5
+		   					<option value = "6일">6
+		   					<option value = "7일">7
+		   					<option value = "8일">8
+		   					<option value = "9일">9
+		   					<option value = "10일">10
+		   					<option value = "11일">11
+		   					<option value = "12일">12
+		   					<option value = "13일">13
+		   					<option value = "14일">14
+		   					<option value = "15일">15
+		   					<option value = "16일">16
+		   					<option value = "17일">17
+		   					<option value = "18일">18
+		   					<option value = "19일">19
+		   					<option value = "20일">20
+		   					<option value = "21일">21
+		   					<option value = "22일">22
+		   					<option value = "23일">23
+		   					<option value = "24일">24
+		   					<option value = "25일">25
+		   					<option value = "26일">26
+		   					<option value = "27일">27
+		   					<option value = "28일">28
+		   					<option value = "29일">29
+		   					<option value = "30일">30
+		   					<option value = "31일">31
+		   				</select>일
+		   					
+		   				<input type = "radio" name = "lunarPower" id = "positive"checked>
+		   				<label for = "positive">양력</label>
+		   				<input type = "radio" name = "lunarPower" id = "positive">
+		   				<label for = "positive">음력</label>
+		   	</tr>
+		   	<tr>
+		   		<td>전화번호</td>
+		   		<td>
+		   			<select name = "num">
+	   					<option value = "서울" >02</option>
+	   					<option value = "부산" >051</option>
+	   					<option value = "대구" >053</option>
+	   					<option value = "인천" >032</option>
+	   					<option value = "광주" >062</option>
+	   					<option value = "대전" >042</option>
+	   					<option value = "울산" >052</option>
+	   					<option value = "세종" >044</option>
+	   					<option value = "경기" >031</option>
+	   					<option value = "강원" >033</option>
+	   					<option value = "충북" >043</option>
+	   					<option value = "충남" >041</option>
+	   					<option value = "전북" >063</option>
+	   					<option value = "전남" >061</option>
+	   					<option value = "경북" >054</option>
+	   					<option value = "경남" >055</option>
+	   					<option value = "제주" >064</option>
+	   				</select>	-
+	   				<input type = "text" size = 2>-<input type = "text" size = 2>			   		
+		   		</td>			
+		   </tr>
+		   <tr>
+		   		<td>휴대폰번호</td>
+		   		<td>
+		   			<select name = "num">
+		   				<option value = "010">010</option>
+		   			</select> -
+		   			<input type = "text" size = 2>-<input type = "text" size = 2>		
+		   		</td>	
+		   </tr>
+		   <tr>
+		   		<td rowspan = "3"><label for ="Address">주소</label></td>
+		   		<td><input type = "text" name = "postnum" id ="Address" readonly>
+		   				<input type = "button" value = "우편번호찾기"></td>
+		   </tr>
+		   <tr>
+		   		<td><input type = "text" name = "adress1" id ="Address"  size = "40"></td>
+		   </tr>
+		   <tr>
+		   		<td><input type = "text" name = "adress2" id ="Address"  size = "40">상세 주소 입력</td>
+		   </tr>
+		   <tr>
+		   		<td><label for = "positive">성별</label></td>
+		   		<td><input type = "radio" name = "gender" id = positive value = "남">남
+		   				<input type = "radio" name = "gender" id = positive value = "여">여
+		   		</td>
+		   </tr>
+		   <tr>
+		   		<td><label for = "job">직업</label></td>
+				<td><select name = "직업" id = "job">
+							<option value = "프로그래머">프로그래머</option>
+						</select>
+		   </tr>
+		   <tr>
+		   		<td><label for = "Email">이메일</label></td>
+		   		<td><input type = "text" name = "이메일" id = "Email">@
+		   				<select name = "EmailAddress">
+		   					<option value = "네이버">naver.com</option>
+		   					<option value = "outlook">hotmail.com</option>
+		   					<option value = "google">gmail.com</option>
+		   					<option value = "카카오">kakao.com</option>
+		   				</select>
+		   		</td>
+		   </tr>
+		   <tr>
+		   		<td><label for = "emailreceive">이메일 수신 여부</label></td>
+		   		<td><input type = "radio" name = "receive" value = "yes">예
+		   				<input type = "radio" name = "receive" value = "no">아니오
+		   		</td>
+		   </tr>
+		   <tr>
+		   		<td><label for = "domain">관심 분야</label></td>
+		   		<td><input type = "checkbox" name = "frontend" id ="front" checked>프런트엔드
+				   		<input type = "checkbox" name = "backend" id ="back" >백엔드
+				   		<input type = "checkbox" name = "fullstack" id ="full">풀스택
+				   		<input type = "checkbox" name = "javaPrograming" id ="Java">자바</td>
+		   </tr>
+		   <tr>
+		   		<td colspan = "2"></td>
+		   		<td><input type = "submit" value = "회원가입">
+		   				<input type = "reset" value = "취소">
+		   		</td>
+		   </tr>
+		</thead>	
+	</table>
+</body>
+</html>
