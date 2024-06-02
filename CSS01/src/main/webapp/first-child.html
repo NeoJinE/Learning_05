@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>first-child 선택자</title>
+	<style type="text/css">
+			#content div {
+			width:400px;
+			height:50px;
+			border:solid 1px black; 											/* content의 모든 자손 div */
+		  	}
+			#content div:first-child{			/* 첫번쨰 자손 */
+					background-color:yellow;
+			}
+			
+			#content div:first-child+div{   /* 두번째 자손 */
+					background-color:green;
+			}
+			
+			#content div:nth-child(3){		/* 세번째 자손 */
+					background-color:gold;
+			}
+			
+			#content div:nth-child(4){		/* 네번째 자손 */
+					background-color:pink;
+			}
+			
+			#content div:last-child{		/* 마지막 자손 */
+					background-color:red;
+			}
+				
+			
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
+
+

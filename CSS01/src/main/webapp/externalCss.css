@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+#wrap{ /*페이지 전체에 영향을 줌. body부분*/
+   margin:0 auto; /*가운데 정렬*/
+   width:800px; /*가운데 정렬 하기 위해서는 width값이 있어야 함*/
+   text-align:center;
+}
+
+
+#mainMenuBox{
+    height:35px;
+    line-height:35px;/*줄간격-수직 가운데 정렬 효과*/
+    background-color:#333;
+    margin-top:30px;
+    margin-bottom:30px
+}
+
+#mainMenuBox ul{
+    padding-left:0;
+    margin:0;
+    list-style:none;
+}
+
+#mainMenuBox li{
+    float:left; /*한줄로정렬*/
+    text-align:center;
+    width:25%;
+}
+
+#mainMenuBox a{
+    text-decoration:none; /*<a>태그 밑줄 없애기*/
+    color:white; /*글자색 흰색*/
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+}
+
+#mainMenuBox a:hover { /*각 메뉴 항목에 마우스 올렸을 때*/
+    color:red;
+    text-decoration:underline;
+    background-color:black;
+}
+
+table{
+    margin:0 auto;
+    widht:600px;
+    margin-bottom:30px;
+}
+
+#prdName {
+    color:blue;
+    font-weight:bold;
+}
+
+#price {
+    color:red;
+}
+
+.box {
+    border:solid 1px grey;
+    display:inline-block;
+    width:320px;
+    height:150px;
+    font-size:small;
+    border-radius:10px;
+    padding-left:20px;
+    padding-right:20px
+    margin:10px;
+    text-align:left;
+ }
+
+.box a:hover {
+    color:red;
+    text-decoration:underline;
+}
+
+img {
+    margin-bottom:20px;
+}
+
+h4,hr {margin-bottom:10px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

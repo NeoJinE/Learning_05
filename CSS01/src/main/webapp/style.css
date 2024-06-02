@@ -1,0 +1,124 @@
+@charset "EUC-KR";
+
+#SSAFY{
+		width:1350px;
+		height:900px;
+		border: 2px solid red;
+	}
+
+header {
+  background-color: #88CC00;  
+  width: 1300px;
+  height: 150px;
+  border: 15px solid white;
+  }
+  
+  #title{
+  	margin-left:18px;
+  }
+
+#menu {
+   list-style-type: none; 
+   font-size: 14px;
+   color:#88CC00;
+   padding: 0; 
+   margin: 0; 
+   margin-right: 70px;
+   margin-left:35px; 
+   
+}
+
+#menu li {
+  display: inline-block; 
+  margin-right: 25px; 
+}
+	
+#postit1{
+	background-color:#EEEEEE;
+	float: right;
+    width: 280px;
+    height:200px; 
+    border: 35px solid white;
+    margin-left: 10px;   
+}
+
+#postit2{
+	margin: 0 auto;
+	width:78%;
+	height:20%
+}
+
+#information{
+	   width:615px;
+		height:510px;
+		border: 2.2px solid #D5D5D5;
+		border-width:2px;
+		margin-left:13.5px; 
+}
+
+
+
+
+
+
+
+ #article1{
+ 	margin-right:10px;
+ 	background-color: #E6E600;
+ 	margin-left:14px;
+ }
+ 
+ 
+    #article2{
+ 	margin-right:10px;
+ 	margin-left:24px; 
+ 
+ 
+ 
+  #article2 tr:first-child{		  
+		background-color:#0D47A1;
+		color:white;
+		margin-left:14px;
+ }
+ 
+ 
+ #article2 tr:nth-child(3){		
+		background-color:#BBDEFB
+		
+ }
+ 
+ 
+ #article2 tr:nth-child(5){		
+		background-color:#BBDEFB
+		
+ }
+ 
+ 
+ #article2 tr:last-child{		
+		background-color:#BBDEFB
+		 */
+ }
+ 
+ 
+#article2 tr:nth-child(2n) td {
+			background-color:#E3F2FD;																																											
+}
+				
+ 	
+ 
+ 
+#Endline{
+ 	width:1300px;
+ 	height:120px;
+ 	border:4px solid #D5D5D5;
+ 	border-width:2px;
+ 	margin-left:13.5px;
+ 	margin-top:70px;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 

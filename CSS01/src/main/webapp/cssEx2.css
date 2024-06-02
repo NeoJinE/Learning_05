@@ -1,0 +1,82 @@
+@charset "EUC-KR";
+
+#wrap {
+    width: 100%;
+    text-align:center;
+    margin:auto;
+}
+
+#mainMenuBox{
+	width:65%;
+	background-color:grey;
+	margin:auto;
+	
+}
+
+#menuItem{
+	display:flex;
+	justify-content:space-around;
+	list-style:none;
+}
+
+#menuItem li{
+	float:left;
+}
+
+#menuItem a{
+	display:block;
+	padding:5px;
+	text-align:center;
+	text-decoration:none;
+	color:white;
+}
+
+#menuItem a:hover {
+    background-color: #333;
+    color: red;
+    text-decoration: underline;
+}
+
+#productBox{
+	display:flex;
+	justify-content:center;
+}
+
+.prdTitle{
+	color:blue;
+}
+
+.prdPrice{
+	color:pink;
+}
+
+#infoBox {
+    display: flex;
+    justify-content:center;
+}
+  
+ .box{
+  border:1px solid black;
+  border-radius: 15px;
+  margin:0 80px;
+ }
+ 
+ .box h4{
+ 	display:flex;
+ 	margin:15px 15px;
+ }
+ 
+ .box a{
+ 	 margin:15%;
+ }
+  
+
+
+
+
+
+
+
+
+
+

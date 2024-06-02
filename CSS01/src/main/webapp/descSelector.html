@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#header h1 {color:red;}  										/* id가 header인 태그의 모든 자손 h1 태그 */
+	#section h2 {color:blue;} 
+	#header h1,h2 {color:yellow;}
+	/* #header h1, #header h2 {color:green;} */					/* id가 header인 태그의 모든 자손 h1과 모든 자손 h2 */
+</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">header - h1 제목</h1>
+<div id="nav">
+	<h1>header-nav-h1제목</h1>
+	<h2>header-nav-h2제목</h2>
+</div>
+</div>
+
+<div id="section">
+	<h2 class="title">section-h2 제목</h2><!-- id "section"의 태그의 자식태그 이면서 자손 태그이기도 한다. -->
+</div>
+</body>
+</html>

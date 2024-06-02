@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자식 선택자</title>
+		<style type="text/css">
+			/* header - h1 제목 : 빨간색 적용 (자식 선택자 사용) */
+				#header>h1	{color:red;}	
+				
+				
+			/* header-nav - h2제목 : 파란색 적용 (자식 선택자 사용) */        
+				#header>#nav>h2 {color:blue;}												
+				
+																						
+			
+			/* table 태그에 자식 선택자 사용 시 주의!  */
+			/* table의 제목(이름, 지역) : 빨간색 적용 (자식 선택자 사용)  */
+			table>tr>th {color:red;}
+			
+			    /* 적용 안 됨  */
+			    /* table>tbody>tr>th {color:red;} */  /* 브라우저의 기능으로 필요에 의해 개발자가 작성하지않은 element가 추가될 수 있음 *//* 크롬 개발자도구-f12,element에서 확인후, 선택자 사용 tbody가 자동 추가됨. */
+			    
+			    /* 적용 안 됨  */
+			    
+			 tr > th {color:red;}   /* 가능 */
+			 /* table기준 선택 시 자손 선택자 이용하면 가능. */
+			 table th {color:green;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+        	<h1 class="title">header - h1 제목</h1>
+	        <div id="nav">
+	            <h1>header-nav - h1제목</h1>
+	            <h2>header-nav - h2제목</h2>
+	        </div>	
+    	</div>
+    	
+	    <div id="section">
+	        <h2 class="title">section-h2 제목</h2>
+	    </div>
+	    
+	    <table border="1">
+	        <tr>
+	            <th>이름</th>
+	            <th>지역</th>
+	        </tr>
+	        <tr>
+	            <td>윤인성</td>
+	            <td>서울특별시 강서구 내발산동</td>
+	        </tr>
+	    </table>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Position 속성</title>
+    <style type="text/css"> 	
+	#parent{
+		/* 위치 지정하지 않음. */
+		position:absolute; 								/* 상위요소에 position을 설정했기에, boxB에 영향을 미침.-부모 태그를 기준으로 absolute설정된 boxB가 이동. */
+		width:200px;
+		height:300px;
+		top:0px;
+		left:0px;
+		border:solid 5px #000000;
+		/* margin:50px 0 0 50px; */                    /* 왼쪽 오른쪽 아래 위 순서로 마진값이 설정된다. */
+	}
+	
+	#boxA, #boxB, #boxC {/* boxA, boxB, boxC에게 공통으로 적용하는 CSS코드 */
+		width:80px;
+		height:80px;
+	}
+	#boxA{background-color:#ff0000;}
+	#boxB{background-color:#00ff00;}
+	#boxC{background-color:#0000ff;}
+	
+	#boxB{
+		   /* position:static; */          		/* static은 위치변화효과를 넣어줘도 변하지 않는다. */
+		   /* position:relative; */ 				/* boxB가 static을 기준으로 설정한 값만큼 변한다. */
+		   position:absolute;						/* 부모요소(태그)를 기준으로 위치 설정, 부모 요소의 position설정 값에 따라 변한다. */
+		   top:20px;
+		   left:30px;
+	}
+	
+	
+	
+	</style>
+</head>
+	
+<body>
+	<div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+	</div>
+</body>
+</html>
+
+
+
+

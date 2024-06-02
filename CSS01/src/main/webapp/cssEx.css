@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* 1.전체 레이아웃 - 1.화면 가운데로 정렬, 내부 모든 text를 가운데 정렬. */
+#wrap{
+	margin:0 auto;											/*margin:0 auto; 화면 가운데 정렬,=   */
+	width:800px;  											/* 가운데 정렬하기 위해서는  width값이 있어야 한다. */
+	text-align:center;	
+}
+
+/* 2.메인메뉴 */
+#mainMenuBox{ 													/* 메뉴의 넓이는 컨텐츠 화면의 전체 넓이를 사용. 해당 영역 넓이 지정하지 않으면 부모영역 넓이 상속. */
+		height:35px;												/* 메뉴의 높이 직접 설정,  */
+		line-height:35px; 										/* 줄 간격- 수직으로 가운데 정렬효과를 얻을 수 있다. */
+		background-color:grey;
+		margin-top:30px;										/* 브라우저 상단 영역 설정해주는 태그. */
+		margin-bottom:30px;									/* 메뉴 다음에 나오는 요소와의 여백을 설정하는 태그. */
+}
+
+#mainMenuBox ul{ 											/* #mainMenuBox안에 있는 자식요소 ul을 표현한 것, 가독성이 좋다. */
+		padding-left:0;										/* ul 안에 있는 li항목 태그의 여백을 없애는 작업. */
+		margin:0;
+		list-style:none;											/* 목록 기호 생략 */
+}
+
+#mainMenuBox li{
+		float:left;																 /* 한줄로 정렬 */
+		text-align:center;
+		width:25%;															/* 전체영역 800px을 4등분 해준다. */
+}
+
+#mainMenuBox a{
+		text-decoration:none;     							/* <a>태그의 밑줄 없애기. */
+		color:white;												/* 글자색 흰색 */
+		display:block;											/* inline태그인 a태그를 block태그로 변경시켜, a태그 반응 영역이 확장. */
+		font-size:14px;
+		font-weight:bold;
+}
+
+/* 3.각 메뉴 항목에 마우스 올렸을때 처리 */
+#mainMenuBox a:hover {
+		color:red;
+		text-decoration:underline;							/* a태그의 밑줄 보이기. */
+		background-color:black;							/* 태그 css의 display 속성이 block인지에 따라 다른 결과가 나온다. */
+}
+
+#productBox{
+	margin-bottom: 30px;  							 	/* 제품 영역의 width는 컨텐츠 영역을 활용(상속받음), height는 이미지와 글자가 갖는 자체 영역 사용, 단 아래쪽으로 다른 요소 (정보영역)가 배치되므로, 아래 영역과의 margin만 확보. */
+	}
+	
+#productBox div{
+		display:inline-block; 									/* 가로배치, 요소, 크기 벗어나는 영영 확보 */
+		margin:20px; 
+	
+}
+
+#productBox div > h3.prdTitle{
+		margin-bottom:5px;
+		color: blue;
+		font-weight:bold;
+}
+
+#productBox div > p.prdprice{
+	 	color:ff7800;
+}
+
+#infoBox div.box{
+		display:inline-block;
+		border:1px solid #9e9e9e;
+		border-radius:10px;
+		width:42%;
+		height:150px;
+		margin:10px;
+		padding:5px;
+		text-align:left;	
+}																	/* infoBox 태그가 게시판을 담고 있는 영역, width는 전체 영역 상속 height는 게시판의 크기 그대로 사용. */
+
+#infoBox div.box hr{
+	margin:5px;
+}
+
+#infoBox div.box a:hover{
+	color:ff7800
+}
+
+
+
+
+
+
+
+
+
+
+

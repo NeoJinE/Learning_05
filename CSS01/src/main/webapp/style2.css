@@ -1,0 +1,40 @@
+@charset "EUC-KR";
+
+#SSAFY{
+		width:1000px;
+		height:900px;
+		border: 2px solid red;
+	}
+
+header {
+  background-color: #90EE90;  /* 연두색 */
+  padding: 10px; /* 내부 여백 추가 */
+}
+
+#menu {
+   list-style-type: none; 
+   font-size: 14px;
+  /* padding: 0; 
+   margin: 0; 
+   margin-right: 70px;*/ 
+}
+
+#menu li {
+  display: inline-block; /* 요소들을 가로로 나란히 배치 */
+  margin-right: 25px; /* 각 항목 사이의 간격 조정 */
+}
+	
+#postit{
+	float: right;
+    width: 30%; 
+    margin-left: 20px;  
+}
+
+
+#information{
+	    width:615px;
+		height:510px;
+		border: 0.5px solid ;
+	
+}
+

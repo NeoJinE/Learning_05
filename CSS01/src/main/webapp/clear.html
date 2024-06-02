@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS:float/clear 속성</title>
+<style>
+	#menu {list-style:none; padding:0;}
+	#menu li {float:Left;}  /* id가 menu인 태그 내부의 li태그는 왼쪽에서 오른쪽으로 배치가 됨. */
+	/* #menu li {float:right;} */
+	/* id가 menu인 태그 내부의 li태그에 float를 걸어도 그 이후 태그에 (p)까지 float 영향을 미친다-clear 이용해서 해결. */
+	#p1 {clear:left;} /* clear:both 사용가능 */
+</style>
+</head>
+<body>
+<div>
+	<ul id="menu">
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+	</ul>
+	<p id="p1">메뉴 아래에 위치하는 내용</p>
+</div>
+</body>
+</html>

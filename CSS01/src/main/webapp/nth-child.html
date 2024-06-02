@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블에서 짝수 행 선택 </title>
+	<style type="text/css">		
+        #stdTable{
+            margin:0 auto;
+            border-collapse:collapse;/*단일 경계선*/
+        }
+        #stdTable th {
+            color:white;
+            background-color:blue;
+        }
+
+        #stdTable th.name{width:100px;}
+        #stdTable th.email{width:200px;}
+
+        #stdTable td {height:20px}
+
+		/* 짝수행 선택된 태그의 2의 배수번째 태그 */
+		#stdTable tr:nth-child(2n) td {
+			background-color:yellow;
+		
+		}
+
+    </style>
+</head>
+
+<body>
+    <table id="stdTable" border="1">
+        <tr> <th class="name">이름</th>
+                 <th class="email">이메일</th></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>        
+    </table>
+</body>
+</html>
+
